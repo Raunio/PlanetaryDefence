@@ -1,0 +1,39 @@
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\XnaGameStateManagement.dll
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\XnaGameStateManagement.pdb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\XnaGameStateManagement.dll
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\XnaGameStateManagement.pdb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\AppManifest.xaml
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\WMAppManifest.xml.g
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\WMAppManifest.xml
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\XnaGameStateManagement.xap
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\XapCacheFile.xml
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\XnaGameStateManagement.csprojResolveAssemblyReference.cache
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonA.xnb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonB.xnb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonS.xnb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonX.xnb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\StartGameScreen.xnb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\GameOverScreen.xnb
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\PlayGameScreen.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\XnaGameStateManagement.dll
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\XnaGameStateManagement.pdb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonA.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonB.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonS.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\ButtonX.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\StartGameScreen.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\GameOverScreen.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\Content\Graphics\PlayGameScreen.xnb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\XnaGameStateManagement.dll
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\XnaGameStateManagement.pdb
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\AppManifest.xaml
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\WMAppManifest.xml.g
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\bin\Windows Phone\Debug\XnaGameStateManagement.xap
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagement\obj\Windows Phone\Debug\XapCacheFile.xml

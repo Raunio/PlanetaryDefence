@@ -1,0 +1,2 @@
+D:\WorkShopXnaWindowsPhone\_ApuDelete\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagementContent\obj\Windows Phone\Debug\XnaGameStateManagementContent.contentprojResolveAssemblyReference.cache
+K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagementContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache

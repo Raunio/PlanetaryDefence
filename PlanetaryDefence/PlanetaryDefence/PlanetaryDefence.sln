@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetaryDefence", "PlanetaryDefence\PlanetaryDefence\PlanetaryDefence.csproj", "{8A965955-BC46-4F4A-8DEF-C354095038B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetaryDefenceContent", "PlanetaryDefence\PlanetaryDefenceContent\PlanetaryDefenceContent.contentproj", "{A31DA512-84F0-4B20-BE96-DA98A3825003}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Windows Phone = Debug|Windows Phone
+		Release|Windows Phone = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A965955-BC46-4F4A-8DEF-C354095038B9}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{8A965955-BC46-4F4A-8DEF-C354095038B9}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
+		{8A965955-BC46-4F4A-8DEF-C354095038B9}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
+		{8A965955-BC46-4F4A-8DEF-C354095038B9}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+		{8A965955-BC46-4F4A-8DEF-C354095038B9}.Release|Windows Phone.Build.0 = Release|Windows Phone
+		{8A965955-BC46-4F4A-8DEF-C354095038B9}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
+		{A31DA512-84F0-4B20-BE96-DA98A3825003}.Debug|Windows Phone.ActiveCfg = Debug|Windows Phone
+		{A31DA512-84F0-4B20-BE96-DA98A3825003}.Release|Windows Phone.ActiveCfg = Release|Windows Phone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
