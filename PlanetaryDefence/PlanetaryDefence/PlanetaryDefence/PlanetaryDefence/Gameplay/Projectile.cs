@@ -7,5 +7,9 @@ namespace XnaGameStateManagement.Gameplay
 {
     class Projectile
     {
+        public Projectile()
+        {
+
+        }
     }
 }

@@ -117,7 +117,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XnaGameStateManagementContent\PlanetaryDefenceContent.contentproj">
+    <ProjectReference Include="..\PlanetaryDefenceContent\PlanetaryDefenceContent.contentproj">
       <Name>PlanetaryDefenceContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
       <Project>{A31DA512-84F0-4B20-BE96-DA98A3825003}</Project>
