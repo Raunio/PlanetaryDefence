@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using PlanetaryDefence.Engine;
 
-namespace XnaGameStateManagement.Engine.Entities
+namespace PlanetaryDefence.Engine.Entities
 {
     /// <summary>
     /// Base class for all game characters.
