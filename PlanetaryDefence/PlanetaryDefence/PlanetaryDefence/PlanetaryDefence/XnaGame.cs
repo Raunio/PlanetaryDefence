@@ -58,7 +58,7 @@ namespace XnaGame
             Components.Add(screenManager);
 
             // Game screens
-            StartGameScreen = new StartGameScreen(this);
+            StartGameScreen = new MenuScreen(this);
             PlayGameScreen = new PlayGameScreen(this);
             GameOverScreen = new GameOverScreen(this);
 

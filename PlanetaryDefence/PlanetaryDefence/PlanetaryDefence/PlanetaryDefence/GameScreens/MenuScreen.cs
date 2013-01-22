@@ -1,5 +1,5 @@
 ﻿/*
-    GameOverScreen.cs
+    StartGameScreen.cs
     Copyright © Markku Rahikainen 2011.
 	www.Stickmansoft.com
 */
@@ -8,17 +8,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace XnaGame
 {
-    public sealed class GameOverScreen : MainGameScreen, IGameOverScreen
+    public sealed class MenuScreen : MainGameScreen, IStartGameScreen
     {
-        public GameOverScreen(Game game)
+
+        public MenuScreen(Game game)
             : base(game)
         {
-            game.Services.AddService(typeof(IGameOverScreen), this);
+            game.Services.AddService(typeof(IStartGameScreen), this);
         }
 
         protected override void LoadContent()
@@ -26,18 +28,9 @@ namespace XnaGame
 
         }
 
-        internal protected override void ScreenChanged(object sender, EventArgs e)
-        {
-            base.ScreenChanged(sender, e);
-
-            if (ScreenManager.TopScreen != this.Screen)
-            {
-                Visible = true;
-            }
-        }
-
         public override void Update(GameTime gameTime)
         {
+
 
             base.Update(gameTime);
         }

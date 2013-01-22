@@ -29,3 +29,20 @@ K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Window
 K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml
 K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap
 K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\XapCacheFile.xml
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\PlanetaryDefence.dll
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\PlanetaryDefence.pdb
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.dll
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.pdb
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\AppManifest.xaml
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml.g
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\XapCacheFile.xml
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\XapCacheFile.xml
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\AppManifest.xaml
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml.g
+E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\

@@ -50,48 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Audio\" />
-    <Folder Include="Textures\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Graphics\ButtonA.png">
-      <Name>ButtonA</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Graphics\ButtonB.png">
-      <Name>ButtonB</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Graphics\ButtonS.png">
-      <Name>ButtonS</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Graphics\ButtonX.png">
-      <Name>ButtonX</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Graphics\StartGameScreen.png">
-      <Name>StartGameScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Graphics\GameOverScreen.png">
-      <Name>GameOverScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Graphics\PlayGameScreen.png">
-      <Name>PlayGameScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
+    <Folder Include="Entities\" />
+    <Folder Include="Levels\Testilevel\" />
+    <Folder Include="Visual Effects\Explosions\" />
+    <Folder Include="Visual Effects\Others\" />
+    <Folder Include="Visual Effects\Weather Effects\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

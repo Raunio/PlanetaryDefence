@@ -1,7 +1,8 @@
-﻿<xapCache source="K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="10.1.2013 9:42:45">
-  <file source="K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\Background.png" archivePath="Background.png" lastWriteTime="20.12.2010 15:13:14" />
-  <file source="K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\GameThumbnail.png" archivePath="GameThumbnail.png" lastWriteTime="20.12.2010 15:31:42" />
-  <file source="K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="10.1.2013 9:33:41" />
-  <file source="K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="10.1.2013 9:33:41" />
-  <file source="K:\Mobiili Windows\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.dll" archivePath="PlanetaryDefence.dll" lastWriteTime="10.1.2013 9:42:44" />
+﻿<xapCache source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="17.1.2013 9:02:37">
+  <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\Background.png" archivePath="Background.png" lastWriteTime="13.1.2013 13:00:07" />
+  <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\GameThumbnail.png" archivePath="GameThumbnail.png" lastWriteTime="13.1.2013 13:00:07" />
+  <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="13.1.2013 13:00:07" />
+  <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="13.1.2013 13:00:07" />
+  <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.dll" archivePath="PlanetaryDefence.dll" lastWriteTime="17.1.2013 9:02:35" />
+  <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb" archivePath="Content\Fonts\MenuFont.xnb" lastWriteTime="17.1.2013 9:02:34" />
 </xapCache>

@@ -6,7 +6,7 @@ using PlanetaryDefence.Engine.Entities;
 
 namespace PlanetaryDefence.Gameplay.Entities.Turret
 {
-    class TurretSecondaryBarrel : Entity
+    class TurretBarrel : Entity
     {
     }
 }
