@@ -50,10 +50,39 @@ namespace PlanetaryDefence.Gameplay.Entities
             get;
             set;
         }
+        /// <summary>
+        /// Gets or sets the walkspeed of the entity
+        /// </summary>
+        public float WalkSpeed
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Gets or sets the runspeed of the entity
+        /// </summary>
+        public float RunSpeed
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Gets or sets the tangential velcoity of the entity.
+        /// </summary>
+        public float TangentialVelocity
+        {
+            get;
+            set;
+        }
 
         #endregion
 
         #region Methods
+
+        public override void Update(GameTime gameTime)
+        {
+            
+        }
 
         protected void Rotate()
         {

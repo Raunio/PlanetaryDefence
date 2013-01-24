@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace PlanetaryDefence.Gameplay.Entities.Turret
 {
-    class Turret : Entity
+    class Turret : MovingEntity
     {
         private TurretBody turretBody;
 

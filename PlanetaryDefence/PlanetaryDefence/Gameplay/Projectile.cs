@@ -34,6 +34,14 @@ namespace PlanetaryDefence.Gameplay
             set;
         }
 
+        /// <summary>
+        /// Gets or sets the number of penetrated entities of the projectile.
+        /// </summary>
+        public int PenetratedEntities
+        {
+            get;
+            set;
+        }
 
         #endregion
 
@@ -42,6 +50,7 @@ namespace PlanetaryDefence.Gameplay
         public Projectile()
         {
             IsActive = true;
+            PenetratedEntities = 0;
         }
 
         public override void Update(GameTime gameTime)
