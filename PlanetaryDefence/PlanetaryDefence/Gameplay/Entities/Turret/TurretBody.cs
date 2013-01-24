@@ -2,11 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PlanetaryDefence.Engine.Entities;
 
 namespace PlanetaryDefence.Gameplay.Entities.Turret
 {
-    class TurretBody : Entity
+    public class TurretBody : Entity
     {
+        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PlanetaryDefence.Engine
 {
-    class Constants
+    public class Constants
     {
         #region Levels
 
@@ -46,6 +46,22 @@ namespace PlanetaryDefence.Engine
         #endregion
 
         #region Enumerations
+
+        public enum EntityRotationDirection
+        {
+            Clockwise,
+            Counterclockwise,
+            None,
+        }
+
+        public enum CharacterState
+        {
+            Stopped,
+            Walking,
+            Attacking,
+            Disabled,
+            Dead,
+        }
 
         #endregion
     }

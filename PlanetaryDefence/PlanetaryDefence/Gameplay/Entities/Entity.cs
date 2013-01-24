@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 using PlanetaryDefence.Engine;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace PlanetaryDefence.Engine.Entities
+namespace PlanetaryDefence.Gameplay.Entities
 {
     /// <summary>
     /// Base class for all game entities.
@@ -14,18 +14,28 @@ namespace PlanetaryDefence.Engine.Entities
     public abstract class Entity
     {
         #region Members
+
         protected Animation currentAnimation;
-        protected float rotation;
+        protected Vector2 facingPoint;
+        
         #endregion
 
         #region Gets & Sets
         /// <summary>
-        /// Gets the position of the entity.
+        /// Gets or sets the position of the entity.
         /// </summary>
         public Vector2 Position
         {
             get;
-            protected set;
+            set;
+        }
+        /// <summary>
+        /// Gets or sets the velocity of the entity. Z-axis represents rotation velocity.
+        /// </summary>
+        public Vector3 Velocity
+        {
+            get;
+            set;
         }
         /// <summary>
         /// Gets the bounding box of the entity. The bounding box is equal to the size of the current animation frame and is primarily used for collision detection.
@@ -37,6 +47,39 @@ namespace PlanetaryDefence.Engine.Entities
                 return new Rectangle((int)Position.X, (int)Position.Y, currentAnimation.FrameWidth, currentAnimation.FrameHeight);
             }
         }
+        /// <summary>
+        /// Gets or sets the rotation direction of the entity.
+        /// </summary>
+        public Constants.EntityRotationDirection RotationDirection
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Gets or sets the rotation acceleration of the entity.
+        /// </summary>
+        public float RotationAcceleration
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Gets or sets the acceleration of the entity.
+        /// </summary>
+        public float Acceleration
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Gets or sets the rotation of the entity in radians.
+        /// </summary>
+        public float Rotation
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region Methods
@@ -48,11 +91,31 @@ namespace PlanetaryDefence.Engine.Entities
         {
             spriteBatch.Draw(currentAnimation.spriteSheet,
                 new Rectangle((int)Position.X, (int)Position.Y, currentAnimation.FrameWidth, currentAnimation.FrameHeight),
-                currentAnimation.FrameRectangle, Color.White, rotation, new Vector2(currentAnimation.FrameRectangle.Width / 2, currentAnimation.FrameRectangle.Height / 2),
+                currentAnimation.FrameRectangle, Color.White, Rotation, new Vector2(currentAnimation.FrameRectangle.Width / 2, currentAnimation.FrameRectangle.Height / 2),
                 SpriteEffects.None, 0f);
         }
 
         public abstract void Update(GameTime gameTime);
+
+        protected void Rotate()
+        {
+            float newRotation = Rotation;
+
+            if (facingPoint != null)
+            {
+                Vector2 distance = new Vector2(Position.X - facingPoint.X, Position.Y - facingPoint.Y);
+                newRotation = (float)Math.Atan2(distance.Y, distance.X);
+            }
+
+            if (newRotation < Rotation)
+                RotationDirection = Constants.EntityRotationDirection.Clockwise;
+
+            else if (newRotation > Rotation)
+                RotationDirection = Constants.EntityRotationDirection.Counterclockwise;
+                
+            else
+                RotationDirection = Constants.EntityRotationDirection.None;
+        }
         #endregion
 
 

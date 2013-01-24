@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
-      <Time>2013-01-17T09:02:34.1801196+02:00</Time>
+      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
+      <Time>2013-01-22T10:18:17.3260909+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -17,10 +17,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
-      <LoggerRootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
+      <LoggerRootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

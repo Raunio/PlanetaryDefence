@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PlanetaryDefence.Engine.Entities
+namespace PlanetaryDefence.Gameplay.Entities
 {
-    class Boss : Entity
+    public class Boss : Entity
     {
+        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
