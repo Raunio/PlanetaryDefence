@@ -1,3 +1,4 @@
 K:\Mobiili Windows\XnaGameStateManagement\XnaGameStateManagement\XnaGameStateManagementContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
 E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\obj\Windows Phone\Debug\PlanetaryDefenceContent.contentprojResolveAssemblyReference.cache
 E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\obj\Windows Phone\Debug\PlanetaryDefenceContent.contentprojResolveAssemblyReference.cache
+K:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache

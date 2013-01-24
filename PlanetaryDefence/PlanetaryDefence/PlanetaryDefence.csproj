@@ -98,6 +98,7 @@
     <Compile Include="Gameplay\Entities\Boss.cs" />
     <Compile Include="Gameplay\Entities\Enemy.cs" />
     <Compile Include="Gameplay\Entities\Entity.cs" />
+    <Compile Include="Gameplay\Entities\MovingEntity.cs" />
     <Compile Include="Gameplay\Entities\Turret\Turret.cs" />
     <Compile Include="Gameplay\Entities\Turret\TurretBarrel.cs" />
     <Compile Include="Gameplay\Entities\Turret\TurretBody.cs" />

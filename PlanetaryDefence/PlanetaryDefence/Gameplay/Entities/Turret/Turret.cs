@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace PlanetaryDefence.Gameplay.Entities.Turret
 {
@@ -12,9 +13,9 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
         private TurretBarrel mainBarrel;
         private TurretBarrel secondaryBarrel;
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            
         }
 
     }
