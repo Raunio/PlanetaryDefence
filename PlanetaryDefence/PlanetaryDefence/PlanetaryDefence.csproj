@@ -128,7 +128,6 @@
     <Content Include="Background.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
     </Content>
-    <Content Include="ProjectMercury.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlanetaryDefenceContent\PlanetaryDefenceContent.contentproj">
