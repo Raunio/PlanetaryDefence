@@ -10,7 +10,7 @@ namespace PlanetaryDefence.Gameplay.Entities
     /// <summary>
     /// Base class for all moving game entities.
     /// </summary>
-    class MovingEntity : Entity
+    public class MovingEntity : Entity
     {
         #region Members
 
@@ -84,7 +84,7 @@ namespace PlanetaryDefence.Gameplay.Entities
             
         }
 
-        protected void Rotate()
+        public void Rotate()
         {
             float newRotation = Rotation;
 

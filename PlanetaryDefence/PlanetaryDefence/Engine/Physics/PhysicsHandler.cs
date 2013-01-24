@@ -10,7 +10,7 @@ namespace PlanetaryDefence.Engine.Physics
 {
     public class PhysicsHandler
     {
-        public static void ApplyPhysics(Enemy subject)
+        public static void ApplyPhysics(MovingEntity subject)
         {
             Rotate(subject);
 
@@ -22,7 +22,7 @@ namespace PlanetaryDefence.Engine.Physics
             
         }
 
-        private static void Rotate(Enemy subject)
+        private static void Rotate(MovingEntity subject)
         {
             float velocityZ = subject.Velocity.Z;
 
@@ -42,7 +42,7 @@ namespace PlanetaryDefence.Engine.Physics
             subject.Velocity = new Vector3(subject.Velocity.X, subject.Velocity.Y, velocityZ);
         }
 
-        private static void Walk(Enemy subject)
+        private static void Walk(MovingEntity subject)
         {
             if (subject.TangentialVelocity < subject.WalkSpeed)
                 subject.TangentialVelocity += subject.Acceleration;
@@ -51,7 +51,7 @@ namespace PlanetaryDefence.Engine.Physics
                 subject.TangentialVelocity = subject.WalkSpeed;
         }
 
-        private static void Run(Entity entity)
+        private static void Run(MovingEntity entity)
         {
 
         }
