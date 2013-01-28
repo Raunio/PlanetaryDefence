@@ -10,11 +10,15 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using PlanetaryDefence.Gameplay.Entities.Turret;
+using PlanetaryDefence.Engine.Input;
+using PlanetaryDefence.Engine.Physics;
 
 namespace XnaGame
 {
     public sealed class PlayGameScreen : MainGameScreen, IPlayGameScreen
     {
+        Turret turret;
 
         public PlayGameScreen(Game game)
             : base(game)
@@ -24,12 +28,13 @@ namespace XnaGame
 
         public override void Initialize()
         {
+            turret = new Turret(new Vector2(100, 100));
             base.Initialize();
         }
         
         protected override void LoadContent()
         {
-
+            turret.LoadContent(Content);
             base.LoadContent();
         }
 
@@ -50,13 +55,18 @@ namespace XnaGame
 
         public override void Update(GameTime gameTime)
         {
-
+            turret.Update(gameTime);
             base.Update(gameTime);
+
+            turret.FacePoint(InputManager.TouchPosition);
+            PhysicsHandler.ApplyPhysics(turret);
         }
 
         public override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.LightSkyBlue);
+
+            turret.DrawTurret(XGame.SpriteBatch);
 
             base.Draw(gameTime);
         }

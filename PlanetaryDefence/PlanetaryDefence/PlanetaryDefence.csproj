@@ -93,8 +93,8 @@
     <Compile Include="Gameplay\Animation.cs" />
     <Compile Include="Engine\Constants.cs" />
     <Compile Include="Gameplay\Behaviour\Behaviour.cs" />
-    <Compile Include="Gameplay\Camera\Camera.cs" />
-    <Compile Include="Gameplay\Camera\CameraController.cs" />
+    <Compile Include="Gameplay\Cameras\Camera.cs" />
+    <Compile Include="Gameplay\Cameras\CameraController.cs" />
     <Compile Include="Gameplay\Entities\Boss.cs" />
     <Compile Include="Gameplay\Entities\Enemy.cs" />
     <Compile Include="Gameplay\Entities\Entity.cs" />
@@ -102,6 +102,7 @@
     <Compile Include="Gameplay\Entities\Turret\Turret.cs" />
     <Compile Include="Gameplay\Entities\Turret\TurretBarrel.cs" />
     <Compile Include="Gameplay\Entities\Turret\TurretBody.cs" />
+    <Compile Include="Gameplay\Entities\Turret\TurretShield.cs" />
     <Compile Include="Gameplay\HUD\HeadsUpDisplay.cs" />
     <Compile Include="Gameplay\Levels\GameLevel.cs" />
     <Compile Include="Gameplay\Projectile.cs" />

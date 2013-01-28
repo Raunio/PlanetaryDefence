@@ -50,11 +50,37 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Audio\" />
-    <Folder Include="Entities\" />
     <Folder Include="Levels\Testilevel\" />
+    <Folder Include="Sprites\Entities\" />
     <Folder Include="Visual Effects\Explosions\" />
     <Folder Include="Visual Effects\Others\" />
     <Folder Include="Visual Effects\Weather Effects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\playGameButton.png">
+      <Name>playGameButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\turretBarrel.png">
+      <Name>turretBarrel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Sprites\turretBody.png">
+      <Name>turretBody</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\turretShield.png">
+      <Name>turretShield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

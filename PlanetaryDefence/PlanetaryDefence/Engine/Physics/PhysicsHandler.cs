@@ -18,7 +18,7 @@ namespace PlanetaryDefence.Engine.Physics
             float velocityY = (float)Math.Sin(subject.Rotation) * subject.TangentialVelocity;
 
             subject.Position += new Vector2(subject.Velocity.X, subject.Velocity.Y);
-
+            subject.Rotation += subject.Velocity.Z;
             
         }
 
@@ -29,10 +29,12 @@ namespace PlanetaryDefence.Engine.Physics
             switch (subject.RotationDirection)
             {
                 case Constants.EntityRotationDirection.Clockwise:
-                    velocityZ += subject.RotationAcceleration;
+                    if(subject.Velocity.Z < subject.RotationSpeed)
+                        velocityZ += subject.RotationAcceleration;
                     break;
                 case Constants.EntityRotationDirection.Counterclockwise:
-                    velocityZ -= subject.RotationAcceleration;
+                    if(subject.Velocity.Z > -subject.RotationSpeed)
+                        velocityZ -= subject.RotationAcceleration;
                     break;
                 case Constants.EntityRotationDirection.None:
                     velocityZ = 0f;

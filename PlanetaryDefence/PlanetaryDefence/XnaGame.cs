@@ -15,6 +15,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Xna.Framework.Media;
+using PlanetaryDefence.Engine.Input;
 
 namespace XnaGame
 {
@@ -118,23 +119,9 @@ namespace XnaGame
                 this.Exit();
             }
 
-            // Touch
-            HandleTouchScreenInputs();
+            InputManager.HandleTouchScreenInputs();
 
             base.Update(gameTime);
-        }
-
-        private void HandleTouchScreenInputs()
-        {
-            TouchCollection touchCollection = TouchPanel.GetState();
-
-            foreach (TouchLocation touchLoc in touchCollection)
-            {
-                if ((touchLoc.State == TouchLocationState.Pressed) /*|| (touchLoc.State == TouchLocationState.Moved)*/)
-                {
-                    touchPosition = touchLoc.Position;
-                }
-            }
         }
 
         private Boolean CheckIntersection(Rectangle Rect, Vector2 Pt)

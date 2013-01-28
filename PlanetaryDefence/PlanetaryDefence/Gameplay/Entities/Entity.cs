@@ -49,6 +49,14 @@ namespace PlanetaryDefence.Gameplay.Entities
                 return new Rectangle((int)Position.X, (int)Position.Y, currentAnimation.FrameWidth, currentAnimation.FrameHeight);
             }
         }
+        /// <summary>
+        /// Gets the origin of the entity.
+        /// </summary>
+        public Vector2 Origin
+        {
+            get;
+            set;
+        }
 
         #endregion
 
@@ -61,8 +69,7 @@ namespace PlanetaryDefence.Gameplay.Entities
         {
             spriteBatch.Draw(currentAnimation.spriteSheet,
                 new Rectangle((int)Position.X, (int)Position.Y, currentAnimation.FrameWidth, currentAnimation.FrameHeight),
-                currentAnimation.FrameRectangle, Color.White, Rotation, new Vector2(currentAnimation.FrameRectangle.Width / 2, currentAnimation.FrameRectangle.Height / 2),
-                SpriteEffects.None, 0f);
+                currentAnimation.FrameRectangle, Color.White, Rotation, Origin, SpriteEffects.None, 0f);
         }
 
         public abstract void Update(GameTime gameTime);

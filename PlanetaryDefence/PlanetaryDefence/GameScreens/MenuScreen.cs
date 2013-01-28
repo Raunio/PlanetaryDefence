@@ -11,11 +11,14 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using PlanetaryDefence.Engine.Input;
 
 namespace XnaGame
 {
     public sealed class MenuScreen : MainGameScreen, IStartGameScreen
     {
+        Texture2D playGameButtonTexture;
+        Rectangle playGameButtonRectangle;
 
         public MenuScreen(Game game)
             : base(game)
@@ -25,12 +28,16 @@ namespace XnaGame
 
         protected override void LoadContent()
         {
-
+            playGameButtonTexture = Content.Load<Texture2D>("Sprites/playGameButton");
+            playGameButtonRectangle = new Rectangle(100, 100, playGameButtonTexture.Width, playGameButtonTexture.Height);
         }
 
         public override void Update(GameTime gameTime)
         {
-
+            if (playGameButtonRectangle.Contains((int)InputManager.TouchPosition.X, (int)InputManager.TouchPosition.Y))
+            {
+                ScreenManager.PushScreen((GameScreen)XGame.PlayGameScreen);
+            }
 
             base.Update(gameTime);
         }
@@ -38,6 +45,8 @@ namespace XnaGame
         public override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.LightSkyBlue);
+
+            XGame.SpriteBatch.Draw(playGameButtonTexture, playGameButtonRectangle, Color.White);
 
             base.Draw(gameTime);
         }

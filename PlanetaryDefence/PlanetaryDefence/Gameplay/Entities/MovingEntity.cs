@@ -35,6 +35,14 @@ namespace PlanetaryDefence.Gameplay.Entities
             set;
         }
         /// <summary>
+        /// Gets or sets the maximun rotation speed of the entity.
+        /// </summary>
+        public float RotationSpeed
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Gets or sets the rotation acceleration of the entity.
         /// </summary>
         public float RotationAcceleration
@@ -90,19 +98,24 @@ namespace PlanetaryDefence.Gameplay.Entities
 
             if (facingPoint != null)
             {
-                Vector2 distance = new Vector2(Position.X - facingPoint.X, Position.Y - facingPoint.Y);
+                Vector2 distance = new Vector2(facingPoint.X - Position.X - Origin.X, facingPoint.Y - Position.Y - Origin.Y);
+
                 newRotation = (float)Math.Atan2(distance.Y, distance.X);
             }
 
-            if (newRotation < Rotation)
+            if (Rotation < newRotation - RotationAcceleration)
                 RotationDirection = Constants.EntityRotationDirection.Clockwise;
 
-            else if (newRotation > Rotation)
+            else if (Rotation > newRotation + RotationAcceleration)
                 RotationDirection = Constants.EntityRotationDirection.Counterclockwise;
 
             else
                 RotationDirection = Constants.EntityRotationDirection.None;
+
+
+
         }
+
         #endregion
     }
 }

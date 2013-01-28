@@ -31,6 +31,11 @@ namespace PlanetaryDefence.Engine
 
         #region Sprite Sheets
 
+        public const String TurretMainBarrelSpritesheet = "Sprites/turretBarrel";
+        public const String TurretSecondaryBarrelSheet = "Sprites/turretBarrel";
+        public const String TurretBodySpritesheet = "Sprites/turretBody";
+        public const String TurretShieldSpritesheet = "Sprites/turretShield";
+
         #endregion
 
         #region Background Images
@@ -61,6 +66,21 @@ namespace PlanetaryDefence.Engine
             Attacking,
             Disabled,
             Dead,
+        }
+
+        public enum TurretBarrelState
+        {
+            Idle,
+            Shooting,
+            Reloading,
+        }
+
+        public enum TurretShieldState
+        {
+            Active,
+            Disabled,
+            Recharging,
+            TakingHit,
         }
 
         #endregion

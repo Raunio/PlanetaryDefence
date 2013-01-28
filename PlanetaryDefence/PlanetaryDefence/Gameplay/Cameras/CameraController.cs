@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
-namespace PlanetaryDefence.Gameplay.Camera
+namespace PlanetaryDefence.Gameplay.Cameras
 {
     /// <summary>
     /// The camera controller class is used for maneuvering the camera of the game.

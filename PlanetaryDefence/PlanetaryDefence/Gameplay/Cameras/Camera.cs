@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace PlanetaryDefence.Gameplay.Camera
+namespace PlanetaryDefence.Gameplay.Cameras
 {
     class Camera
     {
