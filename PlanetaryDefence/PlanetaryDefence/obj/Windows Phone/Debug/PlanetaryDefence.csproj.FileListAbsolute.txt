@@ -83,3 +83,9 @@ D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDe
 D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml
 D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap
 D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\XapCacheFile.xml
+D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap
+D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\XapCacheFile.xml
+D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\AppManifest.xaml
+D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml.g
+D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml
+bin\Windows Phone\Debug\
