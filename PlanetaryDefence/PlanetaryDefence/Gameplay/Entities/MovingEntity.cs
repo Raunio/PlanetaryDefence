@@ -98,23 +98,55 @@ namespace PlanetaryDefence.Gameplay.Entities
 
             if (facingPoint != null)
             {
-                Vector2 distance = new Vector2(facingPoint.X - Position.X - Origin.X, facingPoint.Y - Position.Y - Origin.Y);
+                Vector2 distance2D = new Vector2(facingPoint.X - Position.X - Origin.X, facingPoint.Y - Position.Y - Origin.Y);
 
-                newRotation = (float)Math.Atan2(distance.Y, distance.X);
+                newRotation = (float)Math.Atan2(distance2D.Y, distance2D.X);
             }
 
-            if (Rotation < newRotation - RotationAcceleration)
-                RotationDirection = Constants.EntityRotationDirection.Clockwise;
+            if (newRotation < 0)
+                newRotation += (float)Math.PI * 2;
+            else if (newRotation > Math.PI * 2)
+                newRotation -= (float)Math.PI * 2;
+            if (Rotation < 0)
+                Rotation += (float)Math.PI * 2;
+            else if (Rotation > Math.PI * 2)
+                Rotation -= (float)Math.PI * 2;
 
-            else if (Rotation > newRotation + RotationAcceleration)
-                RotationDirection = Constants.EntityRotationDirection.Counterclockwise;
 
+            float distance = Rotation < newRotation ? newRotation - Rotation : Rotation - newRotation;
+
+            if (distance > RotationSpeed)
+            {
+                if (Rotation < newRotation)
+                {
+                    if (distance > Math.PI)
+                    {
+                        RotationDirection = Constants.EntityRotationDirection.Counterclockwise;
+                    }
+                    else
+                    {
+                        RotationDirection = Constants.EntityRotationDirection.Clockwise;
+                    }
+                }
+                else
+                {
+                    if (distance > Math.PI)
+                    {
+                        RotationDirection = Constants.EntityRotationDirection.Clockwise;
+                    }
+                    else
+                    {
+                        RotationDirection = Constants.EntityRotationDirection.Counterclockwise;
+                    }
+                }
+            }
             else
+            {
                 RotationDirection = Constants.EntityRotationDirection.None;
-
-
-
+            }
         }
+
+        
 
         #endregion
     }

@@ -35,8 +35,8 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             mainBarrel.Position = position + mainBarrelOffset;
             secondaryBarrel.Position = position + secondaryBarrelOffset;
 
-            RotationAcceleration = 0.25f;
-            RotationSpeed = 0.5f;
+            RotationAcceleration = 0.05f;
+            RotationSpeed = 0.2f;
 
             RotationDirection = Constants.EntityRotationDirection.None;
 

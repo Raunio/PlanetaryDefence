@@ -37,7 +37,12 @@ namespace PlanetaryDefence.Engine.Physics
                         velocityZ -= subject.RotationAcceleration;
                     break;
                 case Constants.EntityRotationDirection.None:
-                    velocityZ = 0f;
+                    if (subject.Velocity.Z > subject.RotationAcceleration)
+                        velocityZ -= subject.RotationAcceleration;
+                    else if (subject.Velocity.Z < -subject.RotationAcceleration)
+                        velocityZ += subject.RotationAcceleration;
+                    else
+                        velocityZ = 0;
                     break;
             }
 
