@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
-      <Time>2013-01-22T10:18:17.3260909+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
+      <Time>2013-01-28T18:47:24.5851216+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\playGameButton.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playGameButton.xnb</Output>
-      <Time>2013-01-25T15:59:38.618229+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playGameButton.xnb</Output>
+      <Time>2013-01-28T18:47:24.5861587+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Entities\Turret\turretBarrel.png</Source>
@@ -25,8 +25,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel.xnb</Output>
       <Time>2013-01-28T15:00:40.7272743+02:00</Time>
+=======
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretBarrel.xnb</Output>
+      <Time>2013-01-28T18:47:24.5861587+02:00</Time>
+>>>>>>> c13f07bbbc73b2180168a007cfda10ced6158b84
     </Item>
     <Item>
       <Source>Sprites\Entities\Turret\turretBody.png</Source>
@@ -34,8 +39,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBody.xnb</Output>
       <Time>2013-01-28T15:00:40.7272743+02:00</Time>
+=======
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretBody.xnb</Output>
+      <Time>2013-01-28T18:47:24.5871485+02:00</Time>
+>>>>>>> c13f07bbbc73b2180168a007cfda10ced6158b84
     </Item>
     <Item>
       <Source>Sprites\Entities\Turret\turretShield.png</Source>
@@ -43,8 +53,13 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+<<<<<<< HEAD
       <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretShield.xnb</Output>
       <Time>2013-01-28T15:00:55.9751464+02:00</Time>
+=======
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretShield.xnb</Output>
+      <Time>2013-01-28T18:47:24.5871485+02:00</Time>
+>>>>>>> c13f07bbbc73b2180168a007cfda10ced6158b84
     </Item>
     <Item>
       <Source>Sprites\Entities\Projectiles\plasmaBall.png</Source>
@@ -71,10 +86,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
-      <LoggerRootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
+      <LoggerRootDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -103,7 +118,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-11-30T14:26:17.7644727+02:00</Value>
+        <Value>2012-11-02T00:30:23.4216178+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

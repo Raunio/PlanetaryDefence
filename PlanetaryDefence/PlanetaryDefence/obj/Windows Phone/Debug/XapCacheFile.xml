@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<xapCache source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="29.1.2013 15:45:09">
   <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\Background.png" archivePath="Background.png" lastWriteTime="22.1.2013 10:18:17" />
   <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\GameThumbnail.png" archivePath="GameThumbnail.png" lastWriteTime="22.1.2013 10:18:17" />
@@ -11,4 +12,17 @@
   <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretShield.xnb" archivePath="Content\Sprites\Entities\Turret\turretShield.xnb" lastWriteTime="28.1.2013 19:07:16" />
   <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Projectiles\plasmaBall.xnb" archivePath="Content\Sprites\Entities\Projectiles\plasmaBall.xnb" lastWriteTime="28.1.2013 19:07:16" />
   <file source="E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\plasmagun.xnb" archivePath="Content\Audio\SoundEffects\plasmagun.xnb" lastWriteTime="29.1.2013 15:34:18" />
+=======
+﻿<xapCache source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="28.1.2013 18:56:38">
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\Background.png" archivePath="Background.png" lastWriteTime="28.1.2013 18:47:24" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\GameThumbnail.png" archivePath="GameThumbnail.png" lastWriteTime="28.1.2013 18:47:24" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="28.1.2013 18:47:24" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="28.1.2013 18:47:24" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\PlanetaryDefence.dll" archivePath="PlanetaryDefence.dll" lastWriteTime="28.1.2013 18:56:37" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb" archivePath="Content\Fonts\MenuFont.xnb" lastWriteTime="28.1.2013 18:48:07" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playGameButton.xnb" archivePath="Content\Sprites\playGameButton.xnb" lastWriteTime="28.1.2013 18:48:07" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretBarrel.xnb" archivePath="Content\Sprites\turretBarrel.xnb" lastWriteTime="28.1.2013 18:48:07" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretBody.xnb" archivePath="Content\Sprites\turretBody.xnb" lastWriteTime="28.1.2013 18:48:07" />
+  <file source="D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretShield.xnb" archivePath="Content\Sprites\turretShield.xnb" lastWriteTime="28.1.2013 18:48:07" />
+>>>>>>> c13f07bbbc73b2180168a007cfda10ced6158b84
 </xapCache>
