@@ -3,3 +3,4 @@ E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\Planetary
 E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\obj\Windows Phone\Debug\PlanetaryDefenceContent.contentprojResolveAssemblyReference.cache
 K:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\obj\Windows Phone\Debug\ResolveAssemblyReference.cache
 D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\obj\Windows Phone\Debug\PlanetaryDefenceContent.contentprojResolveAssemblyReference.cache
+D:\koulu\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\obj\Windows Phone\Debug\PlanetaryDefenceContent.contentprojResolveAssemblyReference.cache

@@ -17,12 +17,20 @@ using PlanetaryDefence.Engine;
 using PlanetaryDefence.Gameplay;
 using Microsoft.Xna.Framework.Input.Touch;
 using PlanetaryDefence;
+using PlanetaryDefence.Gameplay.Cameras;
 
 namespace XnaGame
 {
     public sealed class PlayGameScreen : MainGameScreen, IPlayGameScreen
     {
         Turret turret;
+
+        //Shitty test
+        CameraController camControll;
+        Viewport viewPort;
+        Texture2D playGameButtonTexture;
+        Rectangle playGameButtonRectangle;
+        Vector2 rectPosition;
 
         List<Projectile> turretProjectiles;
 
@@ -36,6 +44,11 @@ namespace XnaGame
         {
             turret = new Turret(new Vector2(350, 200));
             turretProjectiles = new List<Projectile>();
+
+            //shitty test
+            viewPort = XGame.GraphicsDevice.Viewport;
+            camControll = new CameraController(viewPort);
+
             Globals.SoundsEnabled = true;
             base.Initialize();
         }
@@ -45,6 +58,12 @@ namespace XnaGame
             turret.LoadContent(Content);
             Projectile.LoadSpriteSheet(Content);
             SoundEffectManager.Instance.LoadContent(Content);
+
+            //shitty test
+            playGameButtonTexture = Content.Load<Texture2D>("Sprites/playGameButton");
+            rectPosition = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
+            playGameButtonRectangle = new Rectangle((int)rectPosition.X, (int)rectPosition.Y, playGameButtonTexture.Width, playGameButtonTexture.Height);
+
             base.LoadContent();
         }
 
@@ -68,6 +87,13 @@ namespace XnaGame
             
             base.Update(gameTime);
 
+            //shitty test
+            camControll.Update(gameTime);
+            camControll.AssingPoint(InputManager.TouchPosition);
+            rectPosition = camControll.Position;
+            playGameButtonRectangle.X = (int)rectPosition.X;
+            playGameButtonRectangle.Y = (int)rectPosition.Y;
+
             turret.FacePoint(InputManager.TouchPosition);
             PhysicsHandler.ApplyCharacterPhysics(turret);
             turret.Update(gameTime);
@@ -88,6 +114,8 @@ namespace XnaGame
             turret.DrawProjectiles(XGame.SpriteBatch);
             turret.DrawTurret(XGame.SpriteBatch);
             
+            //shitty test
+            XGame.SpriteBatch.Draw(playGameButtonTexture, playGameButtonRectangle, Color.White);
 
             base.Draw(gameTime);
         }

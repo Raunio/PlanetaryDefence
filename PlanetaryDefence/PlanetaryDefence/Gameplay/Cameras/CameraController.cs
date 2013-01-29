@@ -14,32 +14,34 @@ namespace PlanetaryDefence.Gameplay.Cameras
     {
         #region Members
 
-        private Viewport viewPort;
         private Vector2 position;
         private Vector2 velocity;
         private Vector2 target;
-        private Camera camera;
 
         #endregion
 
+        #region Getters and setters
+
         /// <summary>
-        /// Gets the position of the camera controller object
+        /// Gets the position of the camera controller object for the camera object to follow.
         /// </summary>
         public Vector2 Position
         {
             get
             {
-                return position;   
+                return position;
             }
         }
 
+        #endregion
+
+        #region Methods
+
         public CameraController(Viewport viewPort)
         {
-            this.viewPort = viewPort;
             position = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
             velocity = Vector2.Zero;
-            target = Vector2.Zero;
-            camera = new Camera(viewPort);
+            target = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
         }
 
         public void Update(GameTime gameTime)
@@ -55,23 +57,59 @@ namespace PlanetaryDefence.Gameplay.Cameras
 
         private void Move()
         {
-            if (position.X < target.X)
+            if (position != target)
             {
+                //Sets the velocity.X according to target and the current velocity.
+                if (position.X < target.X && velocity.X >= 0)
+                {
+                    velocity.X += 1;
+                }
+                else if (position.X < target.X && velocity.X < 0)
+                {
+                    velocity.X = 1;
+                }
+                else if (position.X > target.X && velocity.X <= 0)
+                {
+                    velocity.X -= 1;
+                }
+                else if (position.X > target.X && velocity.X > 0)
+                {
+                    velocity.X = -1;
+                }
+                else
+                {
+                    velocity.X = 0;
+                }
 
+                //Sets the velocity.Y according to the target and the current velocity.
+                if (position.Y < target.Y && velocity.Y >= 0)
+                {
+                    velocity.Y += 1;
+                }
+                else if (position.Y < target.Y && velocity.Y < 0)
+                {
+                    velocity.Y = 1;
+                }
+                else if (position.Y > target.Y && velocity.Y <= 0)
+                {
+                    velocity.Y -= 1;
+                }
+                else if (position.Y > target.Y && velocity.Y > 0)
+                {
+                    velocity.Y = -1;
+                }
+                else
+                {
+                    velocity.Y = 0;
+                }
             }
+
             else
             {
-
-            }
-            if (position.Y < target.Y)
-            {
-
-            }
-            else
-            {
-
+                velocity = Vector2.Zero;
             }
         }
 
+        #endregion
     }
 }
