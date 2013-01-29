@@ -19,6 +19,8 @@ namespace PlanetaryDefence.Engine
 
         public const String MenuSelectedIndexChange = "SoundEffects/MenuSelectedIndexChange";
         public const String MenuIndexSelected = "SoundEffects/MenuIndexSelected";
+
+        public const String PlasmaGunFire = "Audio/SoundEffects/plasmagun";
         
         #endregion
 
@@ -31,10 +33,12 @@ namespace PlanetaryDefence.Engine
 
         #region Sprite Sheets
 
-        public const String TurretMainBarrelSpritesheet = "Sprites/turretBarrel";
-        public const String TurretSecondaryBarrelSheet = "Sprites/turretBarrel";
-        public const String TurretBodySpritesheet = "Sprites/turretBody";
-        public const String TurretShieldSpritesheet = "Sprites/turretShield";
+        public const String TurretMainBarrelSpritesheet = "Sprites/Entities/Turret/turretBarrel";
+        public const String TurretSecondaryBarrelSheet = "Sprites/Entities/Turret/turretBarrel";
+        public const String TurretBodySpritesheet = "Sprites/Entities/Turret/turretBody";
+        public const String TurretShieldSpritesheet = "Sprites/Entities/Turret/turretShield";
+
+        public const String ProjectileSpriteSheet = "Sprites/Entities/Projectiles/plasmaBall";
 
         #endregion
 
@@ -81,6 +85,11 @@ namespace PlanetaryDefence.Engine
             Disabled,
             Recharging,
             TakingHit,
+        }
+
+        public enum ProjectileType
+        {
+            PlasmaBall,
         }
 
         #endregion

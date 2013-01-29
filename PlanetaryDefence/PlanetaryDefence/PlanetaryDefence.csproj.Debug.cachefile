@@ -1,5 +1,7 @@
 Content\Fonts\MenuFont.xnb
 Content\Sprites\playGameButton.xnb
-Content\Sprites\turretBarrel.xnb
-Content\Sprites\turretBody.xnb
-Content\Sprites\turretShield.xnb
+Content\Sprites\Entities\Turret\turretBarrel.xnb
+Content\Sprites\Entities\Turret\turretBody.xnb
+Content\Sprites\Entities\Turret\turretShield.xnb
+Content\Sprites\Entities\Projectiles\plasmaBall.xnb
+Content\Audio\SoundEffects\plasmagun.xnb

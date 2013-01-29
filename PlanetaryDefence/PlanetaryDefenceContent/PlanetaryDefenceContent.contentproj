@@ -49,9 +49,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Audio\" />
     <Folder Include="Levels\Testilevel\" />
-    <Folder Include="Sprites\Entities\" />
     <Folder Include="Visual Effects\Explosions\" />
     <Folder Include="Visual Effects\Others\" />
     <Folder Include="Visual Effects\Weather Effects\" />
@@ -64,22 +62,36 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\turretBarrel.png">
+    <Compile Include="Sprites\Entities\Turret\turretBarrel.png">
       <Name>turretBarrel</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\turretBody.png">
+    <Compile Include="Sprites\Entities\Turret\turretBody.png">
       <Name>turretBody</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\turretShield.png">
+    <Compile Include="Sprites\Entities\Turret\turretShield.png">
       <Name>turretShield</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\Entities\Projectiles\plasmaBall.png">
+      <Name>plasmaBall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\SoundEffects\plasmagun.wav">
+      <Name>plasmagun</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

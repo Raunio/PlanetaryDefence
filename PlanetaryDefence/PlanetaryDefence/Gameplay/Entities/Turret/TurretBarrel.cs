@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using PlanetaryDefence.Engine;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using PlanetaryDefence.Engine.Physics;
 
 namespace PlanetaryDefence.Gameplay.Entities.Turret
 {
@@ -13,18 +14,25 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
     {
         #region Members
 
-        protected Projectile projectile;
-        protected List<Projectile> projectiles;
+        private Constants.ProjectileType projectileType;
 
         private Animation idleAnimation;
         private Animation shootingAnimation;
 
         private Constants.TurretBarrelState barrelState;
 
+        private float shootTimer;
+
         #endregion
 
 
         #region Gets & Sets
+
+        public List<Projectile> Projectiles
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// Gets or sets the firerate of the barrel.
@@ -41,10 +49,14 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
         #region Methods
 
         public TurretBarrel()
-        {
-            projectiles = new List<Projectile>();           
+        {         
             barrelState = Constants.TurretBarrelState.Idle;
-            this.Origin = new Vector2(0, 7);
+            
+            projectileType = Constants.ProjectileType.PlasmaBall;
+
+            Projectiles = new List<Projectile>();
+
+            Firerate = 500;
         }
 
         public void LoadContent(ContentManager content)
@@ -53,11 +65,13 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             shootingAnimation = new Animation(content.Load<Texture2D>(Constants.TurretMainBarrelSpritesheet), 1, 1, 1, 1, 1, 100, false, false);
 
             currentAnimation = idleAnimation;
+
+            this.Origin = new Vector2(0, currentAnimation.FrameHeight / 2);
         }
 
         public override void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+
         }
 
         public void Update(GameTime gameTime, float rotation)
@@ -65,6 +79,16 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             currentAnimation.Animate(gameTime);
             this.Rotation = rotation;
             HandleAnimations();
+
+            foreach (Projectile p in Projectiles)
+            {
+                p.Update(gameTime);
+                PhysicsHandler.ApplyBulletPhysics(p);
+            }
+
+            shootTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            CleanProjectiles();
         }
 
         private void HandleAnimations()
@@ -80,7 +104,35 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             }
         }
 
-        
+        public void Shoot(Vector2 touchLoc)
+        {
+            if (shootTimer >= Firerate)
+            {
+                Vector2 spawnPosition = new Vector2();
+
+                spawnPosition.X = (float)Math.Sin(Rotation);
+                spawnPosition.Y = (float)Math.Cos(Rotation);
+
+                Projectiles.Add(new Projectile(projectileType, Position, Rotation));
+
+                shootTimer = 0;
+
+                SoundEffectManager.Instance.PlasmaGunFire();
+            }
+        }
+
+        public void DrawProjectiles(SpriteBatch spriteBatch)
+        {
+            foreach (Projectile p in Projectiles)
+                p.Draw(spriteBatch);
+        }
+
+        private void CleanProjectiles()
+        {
+            for (int i = 0; i < Projectiles.Count; i++)
+                if (!Projectiles[i].IsActive)
+                    Projectiles.RemoveAt(i);
+        }
 
         #endregion
     }

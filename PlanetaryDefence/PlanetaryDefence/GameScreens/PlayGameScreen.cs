@@ -13,12 +13,18 @@ using Microsoft.Xna.Framework.Input;
 using PlanetaryDefence.Gameplay.Entities.Turret;
 using PlanetaryDefence.Engine.Input;
 using PlanetaryDefence.Engine.Physics;
+using PlanetaryDefence.Engine;
+using PlanetaryDefence.Gameplay;
+using Microsoft.Xna.Framework.Input.Touch;
+using PlanetaryDefence;
 
 namespace XnaGame
 {
     public sealed class PlayGameScreen : MainGameScreen, IPlayGameScreen
     {
         Turret turret;
+
+        List<Projectile> turretProjectiles;
 
         public PlayGameScreen(Game game)
             : base(game)
@@ -28,13 +34,17 @@ namespace XnaGame
 
         public override void Initialize()
         {
-            turret = new Turret(new Vector2(100, 100));
+            turret = new Turret(new Vector2(350, 200));
+            turretProjectiles = new List<Projectile>();
+            Globals.SoundsEnabled = true;
             base.Initialize();
         }
         
         protected override void LoadContent()
         {
             turret.LoadContent(Content);
+            Projectile.LoadSpriteSheet(Content);
+            SoundEffectManager.Instance.LoadContent(Content);
             base.LoadContent();
         }
 
@@ -55,18 +65,29 @@ namespace XnaGame
 
         public override void Update(GameTime gameTime)
         {
-            turret.Update(gameTime);
+            
             base.Update(gameTime);
 
             turret.FacePoint(InputManager.TouchPosition);
-            PhysicsHandler.ApplyPhysics(turret);
+            PhysicsHandler.ApplyCharacterPhysics(turret);
+            turret.Update(gameTime);
+
+            if ((InputManager.TouchState == TouchLocationState.Pressed) || (InputManager.TouchState == TouchLocationState.Moved))
+            {
+                turret.ShootMainBarrel(InputManager.TouchPosition);
+            }
+
+            if (turret.ShotInQueue && turret.Velocity.Z == 0)
+                turret.ShootMainBarrel(InputManager.TouchPosition);
         }
 
         public override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightSkyBlue);
+            GraphicsDevice.Clear(Color.DarkBlue);
 
+            turret.DrawProjectiles(XGame.SpriteBatch);
             turret.DrawTurret(XGame.SpriteBatch);
+            
 
             base.Draw(gameTime);
         }

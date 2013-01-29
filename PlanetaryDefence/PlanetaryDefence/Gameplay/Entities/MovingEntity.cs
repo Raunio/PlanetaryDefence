@@ -82,6 +82,14 @@ namespace PlanetaryDefence.Gameplay.Entities
             get;
             set;
         }
+        /// <summary>
+        /// Gets the last target rotation of the entity.
+        /// </summary>
+        public float TargetRotation
+        {
+            get;
+            private set;
+        }
 
         #endregion
 
@@ -92,7 +100,7 @@ namespace PlanetaryDefence.Gameplay.Entities
             
         }
 
-        public void Rotate()
+        public void UpdateRotation()
         {
             float newRotation = Rotation;
 
@@ -144,6 +152,8 @@ namespace PlanetaryDefence.Gameplay.Entities
             {
                 RotationDirection = Constants.EntityRotationDirection.None;
             }
+
+            TargetRotation = newRotation;
         }
 
         

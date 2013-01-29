@@ -12,6 +12,7 @@ namespace PlanetaryDefence
 
         private SoundEffect menuSelect;
         private SoundEffect menuIndexChange;
+        private SoundEffect plasmaGunFire;
 
         private SoundEffectManager() { }
 
@@ -31,8 +32,7 @@ namespace PlanetaryDefence
         public void LoadContent(ContentManager content)
         {
             this.content = content;
-            menuIndexChange = content.Load<SoundEffect>(Constants.MenuSelectedIndexChange);
-            menuSelect = content.Load<SoundEffect>(Constants.MenuIndexSelected);
+            plasmaGunFire = content.Load<SoundEffect>(Constants.PlasmaGunFire);
             Console.WriteLine("SoundEffects loaded.");
         }
 
@@ -44,6 +44,11 @@ namespace PlanetaryDefence
         public void IndexSelect()
         {
             if (Globals.SoundsEnabled) menuSelect.Play();
+        }
+
+        public void PlasmaGunFire()
+        {
+            if (Globals.SoundsEnabled) plasmaGunFire.Play();
         }
 
         public void PlaySound(string asset)

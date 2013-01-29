@@ -10,7 +10,7 @@ namespace PlanetaryDefence.Engine.Physics
 {
     public class PhysicsHandler
     {
-        public static void ApplyPhysics(MovingEntity subject)
+        public static void ApplyCharacterPhysics(MovingEntity subject)
         {
             Rotate(subject);
 
@@ -20,6 +20,11 @@ namespace PlanetaryDefence.Engine.Physics
             subject.Position += new Vector2(subject.Velocity.X, subject.Velocity.Y);
             subject.Rotation += subject.Velocity.Z;
             
+        }
+
+        public static void ApplyBulletPhysics(MovingEntity subject)
+        {
+            subject.Position += new Vector2(subject.Velocity.X, subject.Velocity.Y);
         }
 
         private static void Rotate(MovingEntity subject)

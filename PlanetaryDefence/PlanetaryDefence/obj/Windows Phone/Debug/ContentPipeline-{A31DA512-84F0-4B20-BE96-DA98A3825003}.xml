@@ -20,31 +20,49 @@
       <Time>2013-01-25T15:59:38.618229+02:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\turretBarrel.png</Source>
-      <Name>Sprites\turretBarrel</Name>
+      <Source>Sprites\Entities\Turret\turretBarrel.png</Source>
+      <Name>Sprites\Entities\Turret\turretBarrel</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretBarrel.xnb</Output>
+      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel.xnb</Output>
       <Time>2013-01-28T15:00:40.7272743+02:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\turretBody.png</Source>
-      <Name>Sprites\turretBody</Name>
+      <Source>Sprites\Entities\Turret\turretBody.png</Source>
+      <Name>Sprites\Entities\Turret\turretBody</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretBody.xnb</Output>
+      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBody.xnb</Output>
       <Time>2013-01-28T15:00:40.7272743+02:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\turretShield.png</Source>
-      <Name>Sprites\turretShield</Name>
+      <Source>Sprites\Entities\Turret\turretShield.png</Source>
+      <Name>Sprites\Entities\Turret\turretShield</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\turretShield.xnb</Output>
+      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretShield.xnb</Output>
       <Time>2013-01-28T15:00:55.9751464+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Projectiles\plasmaBall.png</Source>
+      <Name>Sprites\Entities\Projectiles\plasmaBall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Projectiles\plasmaBall.xnb</Output>
+      <Time>2013-01-28T18:33:30.0576382+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\SoundEffects\plasmagun.wav</Source>
+      <Name>Audio\SoundEffects\plasmagun</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\plasmagun.xnb</Output>
+      <Time>2013-01-29T15:32:36.4095007+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

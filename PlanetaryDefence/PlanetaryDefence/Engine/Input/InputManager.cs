@@ -22,6 +22,12 @@ namespace PlanetaryDefence.Engine.Input
             }
         }
 
+        public static TouchLocationState TouchState
+        {
+            get;
+            private set;
+        }
+
         public static void HandleTouchScreenInputs()
         {
             TouchCollection touchCollection = TouchPanel.GetState();
@@ -32,6 +38,8 @@ namespace PlanetaryDefence.Engine.Input
                 {
                     touchPosition = touchLoc.Position;
                 }
+
+                TouchState = touchLoc.State;
             }
         }
     }

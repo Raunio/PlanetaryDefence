@@ -11,6 +11,7 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
 {
     class Turret : MovingEntity
     {
+        #region Members
         private TurretBody turretBody;
         //private TurretShield turretShield;
 
@@ -19,6 +20,20 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
 
         private Vector2 mainBarrelOffset;
         private Vector2 secondaryBarrelOffset;
+
+        #endregion
+
+        #region Gets & Sets
+
+        public bool ShotInQueue
+        {
+            get;
+            private set;
+        }
+
+        #endregion
+
+        #region Methods
 
         public Turret(Vector2 position)
         {
@@ -60,12 +75,12 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             mainBarrel.Update(gameTime, Rotation);
             secondaryBarrel.Update(gameTime, Rotation);
 
-            Rotate();
+            UpdateRotation();
         }
 
         public void FacePoint(Vector2 point)
         {
-            this.facingPoint = point;
+            this.facingPoint = point;         
         }
 
         public void DrawTurret(SpriteBatch spriteBatch)
@@ -77,5 +92,25 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             turretBody.Draw(spriteBatch);           
         }
 
+        public void DrawProjectiles(SpriteBatch spriteBatch)
+        {
+            mainBarrel.DrawProjectiles(spriteBatch);
+        }
+
+        public void ShootMainBarrel(Vector2 point)
+        {
+            float diff = Rotation - TargetRotation < 0 ? TargetRotation - Rotation : Rotation - TargetRotation;
+
+            if (diff < 0.25f)
+            {
+                mainBarrel.Shoot(point);
+                ShotInQueue = false;
+            }
+            else
+                ShotInQueue = true;
+
+        }
+
+        #endregion
     }
 }
