@@ -16,15 +16,17 @@ namespace PlanetaryDefence.Gameplay.Cameras
     {
         #region Members
 
-        private Vector2 position;
-        private Vector2 velocity;
-        private Vector2 target;
-        private float direction;
         private Vector2 origin;
-        private Vector2 distance;
-        private bool touchActive;
-        private int updateTimes;
+        private Vector2 position;
+        private Vector2 target;
+        private Vector2 targetDistance;
 
+        private Vector2 velocity;
+        private Vector2 direction;
+        private int accelerationMultiplier;
+        
+        private float directionAngle;
+        
         #endregion
 
         #region Getters and setters
@@ -49,55 +51,39 @@ namespace PlanetaryDefence.Gameplay.Cameras
             origin = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
             position = origin;
             velocity = Vector2.Zero;
+            direction = Vector2.Zero;
+            targetDistance = Vector2.Zero;
             target = origin;
-            direction = 0f;
-            touchActive = false;
-            updateTimes = 0;
+            directionAngle = 0f;
+            accelerationMultiplier = 2;
+
         }
 
         public void Update(GameTime gameTime)
         {
             if ((InputManager.TouchState == TouchLocationState.Pressed) || (InputManager.TouchState == TouchLocationState.Moved))
             {
-                touchActive = true;
-                updateTimes++;
-            }
-            else
-            {
-                touchActive = false;
-                updateTimes = 0;
-            }
-
-
-            if (updateTimes > 20)
-            {
+                AssingPoint(InputManager.TouchPosition);
                 position += velocity;
                 Move();
             }
-            else if (!touchActive)
+            else
             {
                 AssingPoint(origin);
                 position += velocity;
                 Move();
             }
+
         }
 
         public void AssingPoint(Vector2 point)
         {
             target = point;
-            distance = new Vector2(target.X - origin.X, target.Y - origin.Y);
+            targetDistance = new Vector2(target.X - position.X, target.Y - position.Y);
 
-            if (target.X > origin.X + 200)
-                target.X = origin.X + 200;
+            directionAngle = (float)Math.Atan2(targetDistance.Y, targetDistance.X);
 
-            else if(target.X < origin.X - 200)
-                target.X = origin.X - 200;
-
-            if (target.Y > origin.Y + 200)
-                target.Y = origin.Y + 200;
-
-            else if(target.Y < origin.Y - 200)
-                target.Y = origin.Y - 200;
+            direction = new Vector2((float)Math.Cos(directionAngle), (float)Math.Sin(directionAngle));
 
         }
 
@@ -105,49 +91,7 @@ namespace PlanetaryDefence.Gameplay.Cameras
         {
             if (position != target)
             {
-                //Sets the velocity.X according to target and the current velocity.
-                if (position.X < target.X && velocity.X >= 0)
-                {
-                    velocity.X += 2;
-                }
-                else if (position.X < target.X && velocity.X < 0)
-                {
-                    velocity.X = 2;
-                }
-                else if (position.X > target.X && velocity.X <= 0)
-                {
-                    velocity.X -= 2;
-                }
-                else if (position.X > target.X && velocity.X > 0)
-                {
-                    velocity.X = -2;
-                }
-                else
-                {
-                    velocity.X = 0;
-                }
-
-                //Sets the velocity.Y according to the target and the current velocity.
-                if (position.Y < target.Y && velocity.Y >= 0)
-                {
-                    velocity.Y += 2;
-                }
-                else if (position.Y < target.Y && velocity.Y < 0)
-                {
-                    velocity.Y = 2;
-                }
-                else if (position.Y > target.Y && velocity.Y <= 0)
-                {
-                    velocity.Y -= 2;
-                }
-                else if (position.Y > target.Y && velocity.Y > 0)
-                {
-                    velocity.Y = -2;
-                }
-                else
-                {
-                    velocity.Y = 0;
-                }
+                velocity = direction;
             }
 
             else

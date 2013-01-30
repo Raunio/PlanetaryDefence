@@ -89,7 +89,7 @@ namespace XnaGame
 
             //shitty test
             camControll.Update(gameTime);
-            camControll.AssingPoint(InputManager.TouchPosition);
+            
             rectPosition = camControll.Position;
             playGameButtonRectangle.X = (int)rectPosition.X;
             playGameButtonRectangle.Y = (int)rectPosition.Y;
