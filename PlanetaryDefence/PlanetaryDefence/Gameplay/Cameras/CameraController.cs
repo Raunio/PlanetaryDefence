@@ -19,13 +19,19 @@ namespace PlanetaryDefence.Gameplay.Cameras
         private Vector2 origin;
         private Vector2 position;
         private Vector2 target;
-        private Vector2 targetDistance;
+        private Vector2 targetDistanceVector;
+        private Vector2 originToPoint;
 
         private Vector2 velocity;
         private Vector2 direction;
-        private int accelerationMultiplier;
+        private float acceleration;
+        private float tangentialVelocity;
+        private float tangentialVelocityMax;
+        private float tangentialVelocityMin;
         
         private float directionAngle;
+        private float movingRadius;
+
         
         #endregion
 
@@ -46,21 +52,42 @@ namespace PlanetaryDefence.Gameplay.Cameras
 
         #region Methods
 
-        public CameraController(Viewport viewPort)
+        public CameraController(Vector2 origin)
         {
-            origin = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
+            this.origin = origin;
             position = origin;
             velocity = Vector2.Zero;
             direction = Vector2.Zero;
-            targetDistance = Vector2.Zero;
+            targetDistanceVector = Vector2.Zero;
+            originToPoint = Vector2.Zero;
             target = origin;
             directionAngle = 0f;
-            accelerationMultiplier = 2;
+            acceleration = 0.2f;
+            tangentialVelocityMin = 0.1f;
+            tangentialVelocityMax = 7.0f;
+            tangentialVelocity = tangentialVelocityMin;
+            movingRadius = 100.0f;
+        }
 
+        private Vector2 CalculateDistanceVector(Vector2 pointTo, Vector2 pointFrom)
+        {
+            Vector2 calculatedDistanceVector = new Vector2(pointTo.X - pointFrom.X, pointTo.Y - pointFrom.Y);
+            return calculatedDistanceVector;
+        }
+
+        private float CalculateDistanceLenght(Vector2 pointTo, Vector2 pointFrom)
+        {
+            Vector2 lengthFrom = CalculateDistanceVector(target, position);
+            return lengthFrom.Length();
         }
 
         public void Update(GameTime gameTime)
         {
+            if (position == origin || position == target)
+            {
+                tangentialVelocity = tangentialVelocityMin;
+            }
+
             if ((InputManager.TouchState == TouchLocationState.Pressed) || (InputManager.TouchState == TouchLocationState.Moved))
             {
                 AssingPoint(InputManager.TouchPosition);
@@ -73,30 +100,50 @@ namespace PlanetaryDefence.Gameplay.Cameras
                 position += velocity;
                 Move();
             }
-
         }
 
         public void AssingPoint(Vector2 point)
         {
-            target = point;
-            targetDistance = new Vector2(target.X - position.X, target.Y - position.Y);
+            originToPoint = CalculateDistanceVector(point, origin);
 
-            directionAngle = (float)Math.Atan2(targetDistance.Y, targetDistance.X);
-
-            direction = new Vector2((float)Math.Cos(directionAngle), (float)Math.Sin(directionAngle));
-
-        }
-
-        private void Move()
-        {
-            if (position != target)
+            if (originToPoint.Length() > movingRadius)
             {
-                velocity = direction;
+                float pointAngle = (float)Math.Atan2(originToPoint.Y, originToPoint.X);
+                Vector2 pointDirection = new Vector2((float)Math.Cos(pointAngle), (float)Math.Sin(pointAngle));
+                target = origin + movingRadius * pointDirection;
             }
 
             else
             {
+                target = point;
+            }
+
+            targetDistanceVector = CalculateDistanceVector(target, position);
+
+            directionAngle = (float)Math.Atan2(targetDistanceVector.Y, targetDistanceVector.X);
+
+            direction = new Vector2((float)Math.Cos(directionAngle), (float)Math.Sin(directionAngle));
+
+            
+        }
+
+        private void Move()
+        {
+            if (tangentialVelocity < tangentialVelocityMax)
+                tangentialVelocity += acceleration;
+            else
+                tangentialVelocity = tangentialVelocityMax;
+
+            float positionToTarget = CalculateDistanceLenght(target, position);
+
+            if (positionToTarget <= tangentialVelocityMax)
+            {
+                position = target;
                 velocity = Vector2.Zero;
+            }
+            else
+            {
+                velocity = direction * tangentialVelocity;
             }
         }
 

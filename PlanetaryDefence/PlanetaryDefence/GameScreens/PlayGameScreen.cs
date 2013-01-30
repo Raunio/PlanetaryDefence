@@ -24,6 +24,7 @@ namespace XnaGame
     public sealed class PlayGameScreen : MainGameScreen, IPlayGameScreen
     {
         Turret turret;
+        Vector2 origin;
 
         //Shitty test
         CameraController camControll;
@@ -42,12 +43,14 @@ namespace XnaGame
 
         public override void Initialize()
         {
-            turret = new Turret(new Vector2(350, 200));
+            viewPort = XGame.GraphicsDevice.Viewport;
+            origin = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
+
+            turret = new Turret(origin);
             turretProjectiles = new List<Projectile>();
 
             //shitty test
-            viewPort = XGame.GraphicsDevice.Viewport;
-            camControll = new CameraController(viewPort);
+            camControll = new CameraController(origin);
 
             Globals.SoundsEnabled = true;
             base.Initialize();
