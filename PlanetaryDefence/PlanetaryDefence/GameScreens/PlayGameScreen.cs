@@ -26,12 +26,9 @@ namespace XnaGame
         Turret turret;
         Vector2 origin;
 
-        //Shitty test
+        Camera camera;
         CameraController camControll;
         Viewport viewPort;
-        Texture2D playGameButtonTexture;
-        Rectangle playGameButtonRectangle;
-        Vector2 rectPosition;
 
         List<Projectile> turretProjectiles;
 
@@ -51,6 +48,7 @@ namespace XnaGame
 
             //shitty test
             camControll = new CameraController(origin);
+            camera = new Camera(viewPort);
 
             Globals.SoundsEnabled = true;
             base.Initialize();
@@ -61,11 +59,6 @@ namespace XnaGame
             turret.LoadContent(Content);
             Projectile.LoadSpriteSheet(Content);
             SoundEffectManager.Instance.LoadContent(Content);
-
-            //shitty test
-            playGameButtonTexture = Content.Load<Texture2D>("Sprites/playGameButton");
-            rectPosition = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
-            playGameButtonRectangle = new Rectangle((int)rectPosition.X, (int)rectPosition.Y, playGameButtonTexture.Width, playGameButtonTexture.Height);
 
             base.LoadContent();
         }
@@ -90,12 +83,8 @@ namespace XnaGame
             
             base.Update(gameTime);
 
-            //shitty test
             camControll.Update(gameTime);
-            
-            rectPosition = camControll.Position;
-            playGameButtonRectangle.X = (int)rectPosition.X;
-            playGameButtonRectangle.Y = (int)rectPosition.Y;
+            camera.LookAt(camControll.Position);
 
             turret.FacePoint(InputManager.TouchPosition);
             PhysicsHandler.ApplyCharacterPhysics(turret);
@@ -112,13 +101,16 @@ namespace XnaGame
 
         public override void Draw(GameTime gameTime)
         {
+
             GraphicsDevice.Clear(Color.DarkBlue);
+
+            XGame.SpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.LinearClamp, DepthStencilState.None, 
+                RasterizerState.CullNone, null, camera.GetTransformation(XGame.SpriteBatch.GraphicsDevice));
 
             turret.DrawProjectiles(XGame.SpriteBatch);
             turret.DrawTurret(XGame.SpriteBatch);
-            
-            //shitty test
-            XGame.SpriteBatch.Draw(playGameButtonTexture, playGameButtonRectangle, Color.White);
+
+            XGame.SpriteBatch.End();
 
             base.Draw(gameTime);
         }

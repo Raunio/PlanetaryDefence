@@ -144,12 +144,8 @@ namespace XnaGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            
-            SpriteBatch.Begin();
 
             base.Draw(gameTime);
-
-            SpriteBatch.End();
         }
     }
 }

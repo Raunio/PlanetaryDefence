@@ -55,20 +55,15 @@ namespace PlanetaryDefence.Gameplay.Cameras
 
         public void LookAt(Vector2 position)
         {
-            if (position.X < viewPort.Width / 2)
-                position.X = viewPort.Width / 2;
-            
             Position = position;
         }
 
-        public Matrix GetTransformation(GraphicsDevice graphicsDevice, Point resolution)
+        public Matrix GetTransformation(GraphicsDevice graphicsDevice)
         {
             Transform =
                 Matrix.CreateTranslation(new Vector3(-Position.X, -Position.Y, 0f)) *
                     Matrix.CreateRotationZ(rotation) *
-                    Matrix.CreateScale((float)graphicsDevice.Viewport.Width / resolution.X,
-                           (float)graphicsDevice.Viewport.Width / resolution.X,
-                           1f) *
+                    Matrix.CreateScale(zoom) *
                     Matrix.CreateTranslation(new Vector3(Origin, 0));
             return Transform;
         }

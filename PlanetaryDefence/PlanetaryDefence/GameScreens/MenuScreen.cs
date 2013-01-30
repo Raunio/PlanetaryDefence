@@ -44,11 +44,15 @@ namespace XnaGame
 
         public override void Draw(GameTime gameTime)
         {
+            XGame.SpriteBatch.Begin();
+
             GraphicsDevice.Clear(Color.LightSkyBlue);
 
             XGame.SpriteBatch.Draw(playGameButtonTexture, playGameButtonRectangle, Color.White);
 
             base.Draw(gameTime);
+
+            XGame.SpriteBatch.End();
         }
     }
 }
