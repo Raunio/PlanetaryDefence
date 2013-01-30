@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
-      <Time>2013-01-29T18:33:17.7375892+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
+      <Time>2013-01-30T18:56:00.6460298+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\playGameButton.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playGameButton.xnb</Output>
-      <Time>2013-01-29T18:33:17.7395893+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playGameButton.xnb</Output>
+      <Time>2013-01-30T18:56:00.6539664+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Entities\Turret\turretBarrel.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel.xnb</Output>
-      <Time>2013-01-29T18:33:17.7385893+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel.xnb</Output>
+      <Time>2013-01-30T18:56:00.6510269+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Entities\Turret\turretBody.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBody.xnb</Output>
-      <Time>2013-01-29T18:33:17.7385893+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBody.xnb</Output>
+      <Time>2013-01-30T18:56:00.6520092+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Entities\Turret\turretShield.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretShield.xnb</Output>
-      <Time>2013-01-29T18:33:17.7395893+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretShield.xnb</Output>
+      <Time>2013-01-30T18:56:00.6530312+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Entities\Projectiles\plasmaBall.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Projectiles\plasmaBall.xnb</Output>
-      <Time>2013-01-29T18:33:17.7385893+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Projectiles\plasmaBall.xnb</Output>
+      <Time>2013-01-30T18:56:00.6500115+02:00</Time>
     </Item>
     <Item>
       <Source>Audio\SoundEffects\plasmagun.wav</Source>
@@ -61,8 +61,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\plasmagun.xnb</Output>
-      <Time>2013-01-29T18:33:17.7375892+02:00</Time>
+      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\plasmagun.xnb</Output>
+      <Time>2013-01-30T18:56:00.643028+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -71,10 +71,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
-      <LoggerRootDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
+      <LoggerRootDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -103,7 +103,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-11-30T14:26:17.7644727+02:00</Value>
+        <Value>2012-11-02T00:30:23.4216178+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

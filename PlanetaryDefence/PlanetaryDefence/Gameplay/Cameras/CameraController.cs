@@ -62,9 +62,9 @@ namespace PlanetaryDefence.Gameplay.Cameras
             originToPoint = Vector2.Zero;
             target = origin;
             directionAngle = 0f;
-            acceleration = 0.2f;
+            acceleration = 0.1f;
             tangentialVelocityMin = 0.1f;
-            tangentialVelocityMax = 7.0f;
+            tangentialVelocityMax = 5.0f;
             tangentialVelocity = tangentialVelocityMin;
             movingRadius = 100.0f;
         }
@@ -129,12 +129,14 @@ namespace PlanetaryDefence.Gameplay.Cameras
 
         private void Move()
         {
-            if (tangentialVelocity < tangentialVelocityMax)
+            float positionToTarget = CalculateDistanceLenght(target, position);
+
+            if (positionToTarget < tangentialVelocityMax / acceleration && tangentialVelocity > 0)
+                tangentialVelocity -= acceleration;
+            else if (tangentialVelocity < tangentialVelocityMax)
                 tangentialVelocity += acceleration;
             else
                 tangentialVelocity = tangentialVelocityMax;
-
-            float positionToTarget = CalculateDistanceLenght(target, position);
 
             if (positionToTarget <= tangentialVelocityMax)
             {
