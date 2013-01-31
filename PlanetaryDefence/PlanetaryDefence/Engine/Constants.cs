@@ -99,6 +99,14 @@ namespace PlanetaryDefence.Engine
             Grunt,
         }
 
+        public enum Direction
+        {
+            Up,
+            Down,
+            Left,
+            Right,
+        }
+
         #endregion
     }
 }

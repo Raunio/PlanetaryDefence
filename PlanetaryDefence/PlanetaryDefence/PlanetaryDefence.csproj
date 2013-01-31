@@ -97,6 +97,7 @@
     <Compile Include="Gameplay\Cameras\CameraController.cs" />
     <Compile Include="Gameplay\Entities\Boss.cs" />
     <Compile Include="Gameplay\Entities\Enemy.cs" />
+    <Compile Include="Gameplay\Entities\EnemySpawner.cs" />
     <Compile Include="Gameplay\Entities\Entity.cs" />
     <Compile Include="Gameplay\Entities\MovingEntity.cs" />
     <Compile Include="Gameplay\Entities\Turret\Turret.cs" />
