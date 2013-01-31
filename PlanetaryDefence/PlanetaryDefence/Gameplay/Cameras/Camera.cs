@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace PlanetaryDefence.Gameplay.Cameras
 {
-    class Camera
+    public class Camera
     {
         #region Members
         private float zoom;       // Kameran zoom

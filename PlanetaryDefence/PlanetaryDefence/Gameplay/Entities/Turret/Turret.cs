@@ -78,11 +78,6 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             UpdateRotation();
         }
 
-        public void FacePoint(Vector2 point)
-        {
-            this.facingPoint = point;         
-        }
-
         public void DrawTurret(SpriteBatch spriteBatch)
         {
             //turretShield.Draw(spriteBatch);

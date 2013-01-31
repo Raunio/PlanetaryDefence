@@ -74,6 +74,11 @@ namespace PlanetaryDefence.Gameplay.Entities
 
         public abstract void Update(GameTime gameTime);
 
+        public void FacePoint(Vector2 point)
+        {
+            this.facingPoint = point;
+        }
+
         #endregion
 
 
