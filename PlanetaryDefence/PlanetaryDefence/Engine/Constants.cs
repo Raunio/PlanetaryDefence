@@ -40,6 +40,8 @@ namespace PlanetaryDefence.Engine
 
         public const String ProjectileSpriteSheet = "Sprites/Entities/Projectiles/plasmaBall";
 
+        public const String EnemySpriteSheet = "Sprites/Entities/enemySpriteSheet";
+
         #endregion
 
         #region Background Images
@@ -90,6 +92,19 @@ namespace PlanetaryDefence.Engine
         public enum ProjectileType
         {
             PlasmaBall,
+        }
+
+        public enum EnemyType
+        {
+            Grunt,
+        }
+
+        public enum Direction
+        {
+            Up,
+            Down,
+            Left,
+            Right,
         }
 
         #endregion

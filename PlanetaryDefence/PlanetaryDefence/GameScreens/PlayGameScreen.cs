@@ -18,19 +18,13 @@ using PlanetaryDefence.Gameplay;
 using Microsoft.Xna.Framework.Input.Touch;
 using PlanetaryDefence;
 using PlanetaryDefence.Gameplay.Cameras;
+using PlanetaryDefence.Gameplay.Levels;
 
 namespace XnaGame
 {
     public sealed class PlayGameScreen : MainGameScreen, IPlayGameScreen
     {
-        Turret turret;
-        Vector2 origin;
-
-        Camera camera;
-        CameraController camControll;
-        Viewport viewPort;
-
-        List<Projectile> turretProjectiles;
+        private GameLevel mainGameLevel;
 
         public PlayGameScreen(Game game)
             : base(game)
@@ -40,15 +34,9 @@ namespace XnaGame
 
         public override void Initialize()
         {
-            viewPort = XGame.GraphicsDevice.Viewport;
-            origin = new Vector2(viewPort.Width / 2, viewPort.Height / 2);
+            mainGameLevel = new GameLevel();
 
-            turret = new Turret(origin);
-            turretProjectiles = new List<Projectile>();
-
-            //shitty test
-            camControll = new CameraController(origin);
-            camera = new Camera(viewPort);
+            mainGameLevel.Initialize(XGame.GraphicsDevice);
 
             Globals.SoundsEnabled = true;
             base.Initialize();
@@ -56,9 +44,7 @@ namespace XnaGame
         
         protected override void LoadContent()
         {
-            turret.LoadContent(Content);
-            Projectile.LoadSpriteSheet(Content);
-            SoundEffectManager.Instance.LoadContent(Content);
+            mainGameLevel.LoadContent(Content);
 
             base.LoadContent();
         }
@@ -80,23 +66,8 @@ namespace XnaGame
 
         public override void Update(GameTime gameTime)
         {
-            
-            base.Update(gameTime);
-
-            camControll.Update(gameTime);
-            camera.LookAt(camControll.Position);
-
-            turret.FacePoint(InputManager.TouchPosition);
-            PhysicsHandler.ApplyCharacterPhysics(turret);
-            turret.Update(gameTime);
-
-            if ((InputManager.TouchState == TouchLocationState.Pressed) || (InputManager.TouchState == TouchLocationState.Moved))
-            {
-                turret.ShootMainBarrel(InputManager.TouchPosition);
-            }
-
-            if (turret.ShotInQueue && turret.Velocity.Z == 0)
-                turret.ShootMainBarrel(InputManager.TouchPosition);
+            mainGameLevel.Update(gameTime);
+            base.Update(gameTime);        
         }
 
         public override void Draw(GameTime gameTime)
@@ -105,10 +76,9 @@ namespace XnaGame
             GraphicsDevice.Clear(Color.DarkBlue);
 
             XGame.SpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.LinearClamp, DepthStencilState.None, 
-                RasterizerState.CullNone, null, camera.GetTransformation(XGame.SpriteBatch.GraphicsDevice));
+                RasterizerState.CullNone, null, mainGameLevel.GameCamera.GetTransformation(XGame.SpriteBatch.GraphicsDevice));
 
-            turret.DrawProjectiles(XGame.SpriteBatch);
-            turret.DrawTurret(XGame.SpriteBatch);
+            mainGameLevel.Draw(XGame.SpriteBatch);
 
             XGame.SpriteBatch.End();
 
