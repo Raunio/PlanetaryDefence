@@ -100,10 +100,13 @@
     <Compile Include="Gameplay\Entities\EnemySpawner.cs" />
     <Compile Include="Gameplay\Entities\Entity.cs" />
     <Compile Include="Gameplay\Entities\MovingEntity.cs" />
+    <Compile Include="Gameplay\Entities\Spawner.cs" />
     <Compile Include="Gameplay\Entities\Turret\Turret.cs" />
     <Compile Include="Gameplay\Entities\Turret\TurretBarrel.cs" />
     <Compile Include="Gameplay\Entities\Turret\TurretBody.cs" />
     <Compile Include="Gameplay\Entities\Turret\TurretShield.cs" />
+    <Compile Include="Gameplay\Entities\UtilityItem.cs" />
+    <Compile Include="Gameplay\Entities\UtilitySpawner.cs" />
     <Compile Include="Gameplay\HUD\HeadsUpDisplay.cs" />
     <Compile Include="Gameplay\Levels\GameLevel.cs" />
     <Compile Include="Gameplay\Projectile.cs" />

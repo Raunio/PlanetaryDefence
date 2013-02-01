@@ -9,58 +9,34 @@ using Microsoft.Xna.Framework.Content;
 
 namespace PlanetaryDefence.Gameplay.Entities
 {
-    class EnemySpawner
+    class EnemySpawner : Spawner
     {
         #region Members
 
         private List<Constants.EnemyType> spawnableEnemies;
-        private TimeSpan previousSpawnTime;
-        private Random randomNumber;
-
         private Texture2D enemySpriteSheet;
-
-        private int waveCounter;
-        private Vector2[] upCordinates;
-        private Vector2[] downCordinates;
-        private Vector2[] leftCordinates;
-        private Vector2[] rightCordinates;
 
         #endregion
 
 
         #region Getters and setters
 
-        /// <summary>
-        /// Gets the list of spawned enemies.
-        /// </summary>
-        public List<Enemy> SpawnedEnemies
-        {
-            get;
-            private set;
-        }
-        /// <summary>
-        /// Gets the spawn rate of the spawning enemies.
-        /// </summary>
-        public TimeSpan SpawnRate
-        {
-            get;
-            private set;
-        }
+        //Getters and setters here.
 
         #endregion
 
 
         #region Methods
 
-        public EnemySpawner(Vector2[] upCordinates, Vector2[] downCordinates, Vector2[] leftCordinates, Vector2[] rightCordinates)
+        public EnemySpawner(Vector2[] possibleUpCordinates, Vector2[] possibleDownCordinates, Vector2[] possibleLeftCordinates, Vector2[] possibleRightCordinates)
         {
-            this.upCordinates = upCordinates;
-            this.downCordinates = downCordinates;
-            this.leftCordinates = leftCordinates;
-            this.rightCordinates = rightCordinates;
+            this.possibleUpCordinates = possibleUpCordinates;
+            this.possibleDownCordinates = possibleDownCordinates;
+            this.possibleLeftCordinates = possibleLeftCordinates;
+            this.possibleRightCordinates = possibleRightCordinates;
 
             spawnableEnemies = new List<Constants.EnemyType>();
-            SpawnedEnemies = new List<Enemy>();
+            SpawnedEntities = new List<Entity>();
 
             previousSpawnTime = TimeSpan.Zero;
             SpawnRate = TimeSpan.FromMilliseconds(5000.0f);
@@ -92,38 +68,22 @@ namespace PlanetaryDefence.Gameplay.Entities
             {
                 previousSpawnTime = gameTime.TotalGameTime;
 
-                int spawnableEnemyIndex = randomNumber.Next(0, waveCounter - 1);
-
-                SpawnEnemy(spawnableEnemies[spawnableEnemyIndex]);
+                SpawnEnemy();
             }
         }
 
-        private void SpawnEnemy(Constants.EnemyType enemyType)
+        private void SpawnEnemy()
         {
-            int directionIndex = randomNumber.Next(0, 3);
-            Constants.Direction direction = (Constants.Direction)directionIndex;
+            Enemy enemy = new Enemy(/*enemySpriteSheet, */GetEnemyType(), GetSpawnPoint());
 
-            switch (direction)
-            {
-                case Constants.Direction.Up:
-                    break;
+            SpawnedEntities.Add(enemy);
+        }
 
-                case Constants.Direction.Down:
-                    break;
-
-                case Constants.Direction.Left:
-                    break;
-
-                case Constants.Direction.Right:
-                    break;
-
-            }
-
-            Vector2 spawnPoint = new Vector2(1,1);
-
-            Enemy enemy = new Enemy(/*enemySpriteSheet, */enemyType, spawnPoint);
-
-            SpawnedEnemies.Add(enemy);
+        private Constants.EnemyType GetEnemyType()
+        {
+            int spawnableEnemyIndex = randomNumber.Next(0, waveCounter - 1);
+            Constants.EnemyType enemyType = spawnableEnemies[spawnableEnemyIndex];
+            return enemyType;
         }
 
         #endregion
