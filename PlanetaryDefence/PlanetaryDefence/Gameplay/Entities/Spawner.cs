@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using PlanetaryDefence.Engine;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace PlanetaryDefence.Gameplay.Entities
 {
@@ -19,7 +20,10 @@ namespace PlanetaryDefence.Gameplay.Entities
         protected Vector2 spawnPoint;
 
         protected TimeSpan previousSpawnTime;
+        protected TimeSpan gameStartTime;
+
         protected Random randomNumber;
+        protected Texture2D entitySpriteSheet;
 
         #endregion
 
@@ -27,7 +31,7 @@ namespace PlanetaryDefence.Gameplay.Entities
         #region Getters and setters
 
         /// <summary>
-        /// Gets the list of spawned enemies.
+        /// Gets the list of spawned entities.
         /// </summary>
         public List<Entity> SpawnedEntities
         {
