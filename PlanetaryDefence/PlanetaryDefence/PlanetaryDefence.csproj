@@ -92,7 +92,7 @@
     <Compile Include="Engine\Physics\PhysicsHandler.cs" />
     <Compile Include="Gameplay\Animation.cs" />
     <Compile Include="Engine\Constants.cs" />
-    <Compile Include="Gameplay\Behaviour\Behaviour.cs" />
+    <Compile Include="Gameplay\Behaviours\Behaviour.cs" />
     <Compile Include="Gameplay\Cameras\Camera.cs" />
     <Compile Include="Gameplay\Cameras\CameraController.cs" />
     <Compile Include="Gameplay\Entities\Boss.cs" />

@@ -12,6 +12,7 @@ using PlanetaryDefence.Gameplay.Cameras;
 using PlanetaryDefence.Engine.Input;
 using PlanetaryDefence.Engine.Physics;
 using Microsoft.Xna.Framework.Input.Touch;
+using PlanetaryDefence.Gameplay.Behaviours;
 
 namespace PlanetaryDefence.Gameplay.Levels
 {
@@ -25,8 +26,16 @@ namespace PlanetaryDefence.Gameplay.Levels
         Viewport viewPort;
 
         List<Projectile> turretProjectiles;
+        List<Entity> enemies;
 
         GraphicsDevice graphics;
+
+        EnemySpawner enemySpawner;
+
+        Vector2[] upCords;
+        Vector2[] leftCords;
+        Vector2[] rightCords;
+        Vector2[] downCords;
 
         public Camera GameCamera
         {
@@ -46,7 +55,19 @@ namespace PlanetaryDefence.Gameplay.Levels
 
             //shitty test
             camControll = new CameraController(origin);
-            GameCamera = new Camera(viewPort);     
+            GameCamera = new Camera(viewPort);
+
+            upCords = new Vector2[2] { new Vector2(20, 20), new Vector2(400, 100) };
+            leftCords = new Vector2[2] { new Vector2(20, 20), new Vector2(20, 400) };
+            rightCords = new Vector2[2] { new Vector2(400, 20), new Vector2(450, 400) };
+            downCords = new Vector2[2] { new Vector2(20, 400), new Vector2(400, 450) };
+
+            enemySpawner = new EnemySpawner(new GameTime(), upCords, downCords, leftCords, rightCords);
+
+            enemies = enemySpawner.SpawnedEntities;
+
+            Behaviour.Initialize(turret.Position);
+            
         }
 
         public void LoadContent(ContentManager content)
@@ -54,6 +75,7 @@ namespace PlanetaryDefence.Gameplay.Levels
             turret.LoadContent(content);
             Projectile.LoadSpriteSheet(content);
             SoundEffectManager.Instance.LoadContent(content);
+            enemySpawner.LoadContent(content);
         }
 
         public void Update(GameTime gameTime)
@@ -64,6 +86,11 @@ namespace PlanetaryDefence.Gameplay.Levels
             turret.FacePoint(InputManager.TouchPosition);
             PhysicsHandler.ApplyCharacterPhysics(turret);
             turret.Update(gameTime);
+
+            enemySpawner.Update(gameTime);
+
+            foreach (Entity e in enemies)
+                e.Update(gameTime);
 
             if ((InputManager.TouchState == TouchLocationState.Pressed) || (InputManager.TouchState == TouchLocationState.Moved))
             {
@@ -78,6 +105,9 @@ namespace PlanetaryDefence.Gameplay.Levels
         {
             turret.DrawProjectiles(spriteBatch);
             turret.DrawTurret(spriteBatch);
+
+            foreach (Entity e in enemies)
+                e.Draw(spriteBatch);
         }
     }
 }

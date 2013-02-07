@@ -40,7 +40,7 @@ namespace PlanetaryDefence.Engine
 
         public const String ProjectileSpriteSheet = "Sprites/Entities/Projectiles/plasmaBall";
 
-        public const String EnemySpriteSheet = "Sprites/Entities/enemySpriteSheet";
+        public const String EnemySpriteSheet = "Sprites/Entities/Enemies/enemy";
 
         #endregion
 

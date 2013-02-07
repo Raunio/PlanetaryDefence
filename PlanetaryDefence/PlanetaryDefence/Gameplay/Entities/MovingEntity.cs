@@ -25,7 +25,14 @@ namespace PlanetaryDefence.Gameplay.Entities
             get;
             set;
         }
-
+        /// <summary>
+        /// Gets the state of the entity.
+        /// </summary>
+        public Constants.CharacterState CurrentState
+        {
+            get;
+            set;
+        }
         /// <summary>
         /// Gets or sets the rotation direction of the entity.
         /// </summary>

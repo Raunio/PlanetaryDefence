@@ -14,11 +14,15 @@ namespace PlanetaryDefence.Engine.Physics
         {
             Rotate(subject);
 
-            float velocityX = (float)Math.Cos(subject.Rotation) * subject.TangentialVelocity;
-            float velocityY = (float)Math.Sin(subject.Rotation) * subject.TangentialVelocity;
-
             subject.Position += new Vector2(subject.Velocity.X, subject.Velocity.Y);
             subject.Rotation += subject.Velocity.Z;
+
+            switch (subject.CurrentState)
+            {
+                case Constants.CharacterState.Walking:
+                    Walk(subject);
+                    break;
+            }
             
         }
 
@@ -61,6 +65,11 @@ namespace PlanetaryDefence.Engine.Physics
 
             else
                 subject.TangentialVelocity = subject.WalkSpeed;
+
+            float velocityX = (float)Math.Cos(subject.Rotation) * subject.TangentialVelocity;
+            float velocityY = (float)Math.Sin(subject.Rotation) * subject.TangentialVelocity;
+
+            subject.Velocity = new Vector3(velocityX, velocityY, subject.Velocity.Z);
         }
 
         private static void Run(MovingEntity entity)
