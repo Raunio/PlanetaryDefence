@@ -15,6 +15,7 @@ namespace PlanetaryDefence.Gameplay.Entities
 
         private List<Constants.EnemyType> spawnableEnemies;
         private Texture2D enemySpriteSheet;
+        private float timer = 0f;
 
         #endregion
 
@@ -24,7 +25,7 @@ namespace PlanetaryDefence.Gameplay.Entities
         /// <summary>
         /// Gets or sets the length of the current wave.
         /// </summary>
-        public TimeSpan WaveTime
+        public float WaveTime
         {
             get;
             set;
@@ -57,7 +58,7 @@ namespace PlanetaryDefence.Gameplay.Entities
 
             previousSpawnTime = TimeSpan.Zero;
             SpawnRate = TimeSpan.FromMilliseconds(5000.0f);
-            WaveTime = TimeSpan.FromMilliseconds(60000.0f);
+            WaveTime = 60000.0f;
 
             waveCounter = 1;
             gameStartTime = gameTime.TotalGameTime;
@@ -78,18 +79,26 @@ namespace PlanetaryDefence.Gameplay.Entities
             {
                 spawnableEnemies.Add((Constants.EnemyType)i);
 
-                if (i >= sizeof(Constants.EnemyType) / sizeof(int))
+                /*if (i >= sizeof(Constants.EnemyType) / sizeof(int))
                 {
-                    return;
+                    break;
                 }
+                  */
+
             }
+
         }
 
         public void Update(GameTime gameTime)
         {
-            if (gameTime.TotalGameTime - gameStartTime >= WaveTime)
+            timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+
+            if (timer >= WaveTime)
             {
+                timer = 0;
                 waveCounter++;
+                WaveTime += 10.0f;
 
                 if (waveCounter == 99) //edit this.
                 {
