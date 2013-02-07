@@ -12,6 +12,8 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using PlanetaryDefence.Engine.Input;
+using PlanetaryDefence.Engine.Audio;
+using PlanetaryDefence;
 
 namespace XnaGame
 {
@@ -30,6 +32,9 @@ namespace XnaGame
         {
             playGameButtonTexture = Content.Load<Texture2D>("Sprites/playGameButton");
             playGameButtonRectangle = new Rectangle(100, 100, playGameButtonTexture.Width, playGameButtonTexture.Height);
+            Globals.SoundsEnabled = true;
+            MusicManager.Instance.LoadContent(Content);
+            MusicManager.Instance.PlayMenuMusic();
         }
 
         public override void Update(GameTime gameTime)

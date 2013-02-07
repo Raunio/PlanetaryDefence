@@ -26,8 +26,8 @@ namespace PlanetaryDefence.Engine
 
         #region Music
 
-        public const String MenuMusic = "Music/MenuMusic";
-        public const String Level1Music = "Music/Level1Music";
+        public const String MenuMusic = "Audio/Music/Menu";
+        public const String Level1Music = "Audio/Music/Backround";
 
         #endregion
 

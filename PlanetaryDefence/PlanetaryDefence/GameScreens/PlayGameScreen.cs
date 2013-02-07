@@ -19,6 +19,7 @@ using Microsoft.Xna.Framework.Input.Touch;
 using PlanetaryDefence;
 using PlanetaryDefence.Gameplay.Cameras;
 using PlanetaryDefence.Gameplay.Levels;
+using PlanetaryDefence.Engine.Audio;
 
 namespace XnaGame
 {
@@ -37,14 +38,15 @@ namespace XnaGame
             mainGameLevel = new GameLevel();
 
             mainGameLevel.Initialize(XGame.GraphicsDevice);
+            MusicManager.Instance.PlayLevel1Music();
 
-            Globals.SoundsEnabled = true;
             base.Initialize();
         }
         
         protected override void LoadContent()
         {
             mainGameLevel.LoadContent(Content);
+            
 
             base.LoadContent();
         }
