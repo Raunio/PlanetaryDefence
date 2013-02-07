@@ -79,11 +79,11 @@ namespace PlanetaryDefence.Gameplay.Entities
             {
                 spawnableEnemies.Add((Constants.EnemyType)i);
 
-                /*if (i >= sizeof(Constants.EnemyType) / sizeof(int))
+                if (i >= sizeof(Constants.EnemyType) / sizeof(int))
                 {
                     break;
                 }
-                  */
+                  
 
             }
 

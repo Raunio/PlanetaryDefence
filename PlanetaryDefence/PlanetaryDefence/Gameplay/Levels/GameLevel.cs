@@ -66,7 +66,7 @@ namespace PlanetaryDefence.Gameplay.Levels
 
             enemies = enemySpawner.SpawnedEntities;
 
-            Behaviour.Initialize(turret.Position);
+            Behaviour.Initialize(turret.Position + turret.Origin);
             
         }
 

@@ -73,7 +73,7 @@ namespace XnaGame
         public override void Draw(GameTime gameTime)
         {
 
-            GraphicsDevice.Clear(Color.DarkBlue);
+            GraphicsDevice.Clear(Color.White);
 
             XGame.SpriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.LinearClamp, DepthStencilState.None, 
                 RasterizerState.CullNone, null, mainGameLevel.GameCamera.GetTransformation(XGame.SpriteBatch.GraphicsDevice));

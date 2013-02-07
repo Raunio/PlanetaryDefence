@@ -84,9 +84,9 @@ namespace PlanetaryDefence.Gameplay.Entities
             switch (enemyType)
             {
                 case Constants.EnemyType.Grunt:
-                    RotationAcceleration = 0.2f;
-                    RotationSpeed = 3f;
-                    WalkSpeed = 5f;
+                    RotationAcceleration = 0.05f;
+                    RotationSpeed = 0.2f;
+                    WalkSpeed = 3f;
                     Acceleration = 0.25f;
                     break;
             }
