@@ -12,7 +12,6 @@ namespace PlanetaryDefence.Gameplay.Entities
     {
         #region Members
 
-        protected int waveCounter;
         protected Vector2[] possibleUpCordinates;
         protected Vector2[] possibleDownCordinates;
         protected Vector2[] possibleLeftCordinates;

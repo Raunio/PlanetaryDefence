@@ -1,0 +1,12 @@
+Content\Fonts\MenuFont.xnb
+Content\Sprites\playGameButton.xnb
+Content\Sprites\Entities\Turret\turretBarrel.xnb
+Content\Sprites\Entities\Turret\turretBody.xnb
+Content\Sprites\Entities\Turret\turretShield.xnb
+Content\Sprites\Entities\Projectiles\plasmaBall.xnb
+Content\Sprites\Entities\Enemies\enemy.xnb
+Content\Audio\SoundEffects\plasmagun.xnb
+Content\Audio\Music\Backround.xnb
+Content\Audio\Music\Backround.wma
+Content\Audio\Music\Menu.xnb
+Content\Audio\Music\Menu.wma
