@@ -20,7 +20,7 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
 
         public void LoadContent(ContentManager content)
         {
-            currentAnimation = new Animation(content.Load<Texture2D>(Constants.TurretBodySpritesheet), 0, 50, 50, 0, 0, 100, false, true);
+            currentAnimation = new Animation(content.Load<Texture2D>(Constants.TurretBodySpritesheet), 0, 75, 66, 0, 0, 100, false, true);
             this.Origin = currentAnimation.Origin;
         }
 

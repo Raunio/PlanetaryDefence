@@ -52,7 +52,7 @@ namespace PlanetaryDefence.Gameplay.Entities
             this.possibleRightCordinates = possibleRightCordinates;
 
             spawnableEnemies = new List<Constants.EnemyType>();
-            SpawnedEntities = new List<Entity>();
+            SpawnedEntities = new List<Enemy>();
 
             randomNumber = new Random();
 

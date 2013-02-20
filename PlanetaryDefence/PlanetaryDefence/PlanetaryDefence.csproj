@@ -95,6 +95,7 @@
     <Compile Include="Gameplay\Behaviours\Behaviour.cs" />
     <Compile Include="Gameplay\Cameras\Camera.cs" />
     <Compile Include="Gameplay\Cameras\CameraController.cs" />
+    <Compile Include="Gameplay\CombatHandler.cs" />
     <Compile Include="Gameplay\Entities\Boss.cs" />
     <Compile Include="Gameplay\Entities\Enemy.cs" />
     <Compile Include="Gameplay\Entities\EnemySpawner.cs" />

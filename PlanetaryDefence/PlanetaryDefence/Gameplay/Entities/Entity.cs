@@ -17,6 +17,7 @@ namespace PlanetaryDefence.Gameplay.Entities
 
         protected Animation currentAnimation;
         protected Vector2 facingPoint;
+        protected Vector2 origin;
         
         #endregion
 
@@ -54,8 +55,17 @@ namespace PlanetaryDefence.Gameplay.Entities
         /// </summary>
         public Vector2 Origin
         {
-            get;
-            set;
+            get
+            {
+                if (origin == null)
+                    return new Vector2(currentAnimation.FrameWidth / 2, currentAnimation.FrameHeight / 2);
+                else
+                    return origin;
+            }
+            set
+            {
+                origin = value;
+            }
         }
 
         #endregion

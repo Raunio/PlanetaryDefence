@@ -130,7 +130,7 @@ namespace PlanetaryDefence.Gameplay.Entities
 
             float distance = Rotation < newRotation ? newRotation - Rotation : Rotation - newRotation;
 
-            if (distance > RotationSpeed)
+            if (distance > RotationAcceleration * 2)
             {
                 if (Rotation < newRotation)
                 {
@@ -158,6 +158,7 @@ namespace PlanetaryDefence.Gameplay.Entities
             else
             {
                 RotationDirection = Constants.EntityRotationDirection.None;
+                Rotation = newRotation;
             }
 
             TargetRotation = newRotation;

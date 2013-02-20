@@ -74,6 +74,7 @@ namespace PlanetaryDefence.Gameplay
                 case Constants.ProjectileType.PlasmaBall:
                     currentAnimation = new Animation(spriteSheet, 0, 15, 15, 0, 0, 100, false, true);
                     TangentialVelocity = 25f;
+                    Damage = 10;
                     break;
             }
         }

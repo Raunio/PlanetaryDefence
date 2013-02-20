@@ -18,8 +18,7 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
         private TurretBarrel mainBarrel;
         private TurretBarrel secondaryBarrel;
 
-        private Vector2 mainBarrelOffset;
-        private Vector2 secondaryBarrelOffset;
+        private Texture2D standTexture;
 
         #endregion
 
@@ -29,6 +28,14 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
         {
             get;
             private set;
+        }
+
+        public List<Projectile> ActiveProjectiles
+        {
+            get
+            {
+                return mainBarrel.Projectiles;
+            }
         }
 
         #endregion
@@ -47,10 +54,10 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             turretBody.Position = position;
             //turretShield.Position = position;
 
-            mainBarrel.Position = position + mainBarrelOffset;
-            secondaryBarrel.Position = position + secondaryBarrelOffset;
+            mainBarrel.Position = position;
+            secondaryBarrel.Position = position;
 
-            RotationAcceleration = 0.05f;
+            RotationAcceleration = 0.075f;
             RotationSpeed = 0.2f;
 
             RotationDirection = Constants.EntityRotationDirection.None;
@@ -66,6 +73,8 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             //turretShield.LoadContent(content);
 
             currentAnimation = turretBody.BodyAnimation;
+
+            standTexture = content.Load<Texture2D>(Constants.TurretStandSpriteSheet);
         }
 
         public override void Update(GameTime gameTime)
@@ -80,7 +89,7 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
 
         public void DrawTurret(SpriteBatch spriteBatch)
         {
-            //turretShield.Draw(spriteBatch);
+            spriteBatch.Draw(standTexture, new Vector2(Position.X - standTexture.Width / 2, Position.Y - standTexture.Height / 2), Color.White);
             mainBarrel.Draw(spriteBatch);
             secondaryBarrel.Draw(spriteBatch);
 

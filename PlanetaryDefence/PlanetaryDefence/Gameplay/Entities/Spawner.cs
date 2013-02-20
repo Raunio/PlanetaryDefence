@@ -33,7 +33,7 @@ namespace PlanetaryDefence.Gameplay.Entities
         /// <summary>
         /// Gets the list of spawned entities.
         /// </summary>
-        public List<Entity> SpawnedEntities
+        public List<Enemy> SpawnedEntities
         {
             get;
             protected set;

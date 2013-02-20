@@ -26,7 +26,7 @@ namespace PlanetaryDefence.Gameplay.Levels
         Viewport viewPort;
 
         List<Projectile> turretProjectiles;
-        List<Entity> enemies;
+        List<Enemy> enemies;
 
         GraphicsDevice graphics;
 
@@ -99,6 +99,8 @@ namespace PlanetaryDefence.Gameplay.Levels
 
             if (turret.ShotInQueue && turret.Velocity.Z == 0)
                 turret.ShootMainBarrel(InputManager.TouchPosition);
+
+            CombatHandler.Instance.Update(turret, enemies);
         }
 
         public void Draw(SpriteBatch spriteBatch)

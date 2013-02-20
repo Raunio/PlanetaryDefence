@@ -14,6 +14,9 @@ namespace PlanetaryDefence
         private SoundEffect menuIndexChange;
         private SoundEffect plasmaGunFire;
 
+        private SoundEffect gruntDamage;
+        private SoundEffect gruntDeath;
+
         private SoundEffectManager() { }
 
         public void Initialize() { }
@@ -33,6 +36,8 @@ namespace PlanetaryDefence
         {
             this.content = content;
             plasmaGunFire = content.Load<SoundEffect>(Constants.PlasmaGunFire);
+            gruntDamage = content.Load<SoundEffect>(Constants.GruntDamageSound);
+            gruntDeath = content.Load<SoundEffect>(Constants.GruntDeathSound);
             Console.WriteLine("SoundEffects loaded.");
         }
 
@@ -49,6 +54,16 @@ namespace PlanetaryDefence
         public void PlasmaGunFire()
         {
             if (Globals.SoundsEnabled) plasmaGunFire.Play();
+        }
+
+        public void GruntDamage()
+        {
+            if (Globals.SoundsEnabled) gruntDamage.Play();
+        }
+
+        public void GruntDeath()
+        {
+            if (Globals.SoundsEnabled) gruntDeath.Play();
         }
 
         public void PlaySound(string asset)

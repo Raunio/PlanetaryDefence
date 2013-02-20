@@ -36,7 +36,7 @@ namespace PlanetaryDefence.Engine.Audio
         {
             if (Globals.SoundsEnabled)
             {
-                MediaPlayer.Volume = 1f;
+                MediaPlayer.Volume = 0.3f;
                 MediaPlayer.Play(level1Song);
                 MediaPlayer.IsRepeating = true;
             }

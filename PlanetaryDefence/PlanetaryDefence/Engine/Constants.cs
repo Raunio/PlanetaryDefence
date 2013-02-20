@@ -21,6 +21,8 @@ namespace PlanetaryDefence.Engine
         public const String MenuIndexSelected = "SoundEffects/MenuIndexSelected";
 
         public const String PlasmaGunFire = "Audio/SoundEffects/plasmagun";
+        public const String GruntDamageSound = "Audio/SoundEffects/gruntDamage";
+        public const String GruntDeathSound = "Audio/SoundEffects/gruntDeath";
         
         #endregion
 
@@ -33,14 +35,15 @@ namespace PlanetaryDefence.Engine
 
         #region Sprite Sheets
 
-        public const String TurretMainBarrelSpritesheet = "Sprites/Entities/Turret/turretBarrel";
-        public const String TurretSecondaryBarrelSheet = "Sprites/Entities/Turret/turretBarrel";
-        public const String TurretBodySpritesheet = "Sprites/Entities/Turret/turretBody";
+        public const String TurretMainBarrelSpritesheet = "Sprites/Entities/Turret/turretBarrel2";
+        public const String TurretSecondaryBarrelSheet = "Sprites/Entities/Turret/turretBarrel2";
+        public const String TurretBodySpritesheet = "Sprites/Entities/Turret/tykkiSmall";
         public const String TurretShieldSpritesheet = "Sprites/Entities/Turret/turretShield";
+        public const String TurretStandSpriteSheet = "Sprites/Entities/Turret/turretStand";
 
         public const String ProjectileSpriteSheet = "Sprites/Entities/Projectiles/plasmaBall";
 
-        public const String EnemySpriteSheet = "Sprites/Entities/Enemies/enemy";
+        public const String EnemySpriteSheet = "Sprites/Entities/Enemies/gruntSheetSmall";
 
         #endregion
 

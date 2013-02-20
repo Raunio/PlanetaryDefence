@@ -61,7 +61,7 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
 
         public void LoadContent(ContentManager content)
         {
-            idleAnimation = new Animation(content.Load<Texture2D>(Constants.TurretMainBarrelSpritesheet), 0, 60, 15, 0, 0, 100, false, true);
+            idleAnimation = new Animation(content.Load<Texture2D>(Constants.TurretMainBarrelSpritesheet), 0, 75, 20, 0, 0, 100, false, true);
             shootingAnimation = new Animation(content.Load<Texture2D>(Constants.TurretMainBarrelSpritesheet), 1, 1, 1, 1, 1, 100, false, false);
 
             currentAnimation = idleAnimation;
@@ -108,11 +108,6 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
         {
             if (shootTimer >= Firerate)
             {
-                Vector2 spawnPosition = new Vector2();
-
-                spawnPosition.X = (float)Math.Sin(Rotation);
-                spawnPosition.Y = (float)Math.Cos(Rotation);
-
                 Projectiles.Add(new Projectile(projectileType, Position, Rotation));
 
                 shootTimer = 0;

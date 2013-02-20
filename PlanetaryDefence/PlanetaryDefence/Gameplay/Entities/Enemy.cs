@@ -27,12 +27,17 @@ namespace PlanetaryDefence.Gameplay.Entities
         /// <summary>
         /// Gets or sets the health of the entity.
         /// </summary>
-        public float Health
+        public float CurrentHealth
         {
             get;
-            set;
+            private set;
         }
 
+        public float MaxHealth
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// Gets the type of the enemy.
@@ -59,6 +64,8 @@ namespace PlanetaryDefence.Gameplay.Entities
             InitAnimations(spriteSheet);
             InitBehaviour();
             InitStats();
+
+            this.Origin = new Vector2(currentAnimation.FrameWidth / 2, currentAnimation.FrameHeight / 2);
         }
 
         private void InitBehaviour()
@@ -71,7 +78,7 @@ namespace PlanetaryDefence.Gameplay.Entities
             switch(enemyType)
             {
                 case Constants.EnemyType.Grunt:
-                    walking = new Animation(spriteSheet, 0, 50, 50, 0, 0, 100, false, true);
+                    walking = new Animation(spriteSheet, 0, 64, 85, 0, 2, 100, false, true);
                     break;
             }
 
@@ -88,8 +95,15 @@ namespace PlanetaryDefence.Gameplay.Entities
                     RotationSpeed = 0.2f;
                     WalkSpeed = 3f;
                     Acceleration = 0.25f;
+                    MaxHealth = 20;
+                    CurrentHealth = 20;
                     break;
             }
+        }
+
+        public void InflictDamage(float amount)
+        {
+            CurrentHealth -= amount;
         }
 
         public override void Update(GameTime gameTime)
