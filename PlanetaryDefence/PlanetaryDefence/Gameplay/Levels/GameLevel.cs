@@ -62,7 +62,7 @@ namespace PlanetaryDefence.Gameplay.Levels
             rightCords = new Vector2[2] { new Vector2(400, 20), new Vector2(450, 400) };
             downCords = new Vector2[2] { new Vector2(20, 400), new Vector2(400, 450) };
 
-            enemySpawner = new EnemySpawner(new GameTime(), upCords, downCords, leftCords, rightCords);
+            enemySpawner = new EnemySpawner(new GameTime(), 100, 60000.0f, 5000.0f, 5000.0f, 500.0f, 1000.0f, upCords, downCords, leftCords, rightCords);
 
             enemies = enemySpawner.SpawnedEntities;
 
