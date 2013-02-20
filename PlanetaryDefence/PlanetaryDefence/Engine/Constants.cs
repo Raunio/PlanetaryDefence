@@ -13,6 +13,7 @@ namespace PlanetaryDefence.Engine
 
         #region Fonts
         public const String GameFont = "Fonts/GameFont";
+        public const String HudFont = "Fonts/georgia";
         #endregion
 
         #region Sound Effects

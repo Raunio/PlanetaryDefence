@@ -42,12 +42,30 @@ namespace PlanetaryDefence.Gameplay
         }
 
         /// <summary>
+        /// Gets the ammount of damage reduction after penetration.
+        /// </summary>
+        public int PenetrationDamageReduction
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
         /// Gets or sets the number of penetrated entities of the projectile.
         /// </summary>
-        public int PenetratedEntities
+        public List <Enemy> PenetratedEnemies
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Gets the maximum ammount of entities to penetrate.
+        /// </summary>
+        public int MaxPenetrations
+        {
+            get;
+            private set;
         }
 
         #endregion
@@ -58,11 +76,10 @@ namespace PlanetaryDefence.Gameplay
         {
             Initialize();
             IsActive = true;
-            PenetratedEntities = 0;
-            float vX = (float)Math.Cos(barrelRotation) * TangentialVelocity;
-            float vY = (float)Math.Sin(barrelRotation) * TangentialVelocity;
-
-            this.Velocity = new Vector3(vX, vY, 0);
+            PenetratedEnemies = new List<Enemy>();
+            
+            Direction = new Vector2((float)Math.Cos(barrelRotation), (float)Math.Sin(barrelRotation));
+            this.Velocity = new Vector3(Direction.X * TangentialVelocity, Direction.Y * TangentialVelocity, 0);         
             this.projectileType = type;
             Position = position;          
         }
@@ -73,8 +90,10 @@ namespace PlanetaryDefence.Gameplay
             {
                 case Constants.ProjectileType.PlasmaBall:
                     currentAnimation = new Animation(spriteSheet, 0, 15, 15, 0, 0, 100, false, true);
-                    TangentialVelocity = 25f;
+                    TangentialVelocity = 50f;
                     Damage = 10;
+                    MaxPenetrations = 2;
+                    PenetrationDamageReduction = 5;
                     break;
             }
         }

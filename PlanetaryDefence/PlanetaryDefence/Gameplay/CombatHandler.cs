@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using PlanetaryDefence.Gameplay.Entities;
 using PlanetaryDefence.Gameplay.Entities.Turret;
+using Microsoft.Xna.Framework;
 
 namespace PlanetaryDefence.Gameplay
 {
@@ -21,25 +22,90 @@ namespace PlanetaryDefence.Gameplay
             }
         }
 
-        public void Update(Turret turret, List<Enemy> enemies)
+        private TimeSpan previousHitTime = TimeSpan.Zero;
+        private TimeSpan hitRate = TimeSpan.FromMilliseconds(1000f);
+
+        /// <summary>
+        /// Gets or sets the area where projectiles are active.
+        /// </summary>
+        public Rectangle GameArea
+        {
+            get;
+            set;
+        }
+
+        public int TotalScore
+        {
+            get;
+            set;
+        }
+
+        public void Update(GameTime gameTime, Turret turret, List<Enemy> enemies)
         {
             List<Projectile> turretProjectiles = turret.ActiveProjectiles;
-
-            for (int p = 0; p < turretProjectiles.Count; p++)
+            
+            for (int E = 0; E < enemies.Count; E++)
             {
-                for (int e = 0; e < enemies.Count; e++)
+                if (turret.BoundingBox.Intersects(enemies[E].BoundingBox))
                 {
-                    if(turretProjectiles[p].BoundingBox.Intersects(enemies[e].BoundingBox))
+                    if (gameTime.TotalGameTime - previousHitTime > hitRate)
                     {
-                        enemies[e].InflictDamage(turretProjectiles[p].Damage);
-                        turretProjectiles.RemoveAt(p);
+                        turret.CurrentHealth -= enemies[E].collisionDamage;
+                        enemies[E].CurrentHealth -= enemies[E].collisionDamage;
+                        
+                        previousHitTime = gameTime.TotalGameTime;
 
-                        if (enemies[e].CurrentHealth > 0)
+                        if (enemies[E].CurrentHealth > 0)
                             SoundEffectManager.Instance.GruntDamage();
                         else
                         {
-                            enemies.RemoveAt(e);
+                            TotalScore -= enemies[E].scorePoints;
+                            enemies.RemoveAt(E);
                             SoundEffectManager.Instance.GruntDeath();
+                        }
+
+                    }
+                }
+            }
+            
+            for (int p = 0; p < turretProjectiles.Count; p++)
+            {
+                bool projectileRemoved = false;
+
+                if (!GameArea.Intersects(turretProjectiles[p].BoundingBox))
+                {
+                    projectileRemoved = true;
+                    turretProjectiles.RemoveAt(p);
+                }
+
+                for (int e = 0; e < enemies.Count; e++)
+                {                    
+                    if (!projectileRemoved)
+                    {
+                        for (int v = (int)turretProjectiles[p].TangentialVelocity + turretProjectiles[p].BoundingBox.Width; v >= 0; v--)
+                        {
+                            Vector2 point = turretProjectiles[p].Position - turretProjectiles[p].Direction * v;
+
+                            if (enemies[e].BoundingBox.Contains((int)point.X, (int)point.Y))
+                            {
+                                enemies[e].InflictDamage(turretProjectiles[p].Damage);
+
+
+                                if (enemies[e].CurrentHealth > 0)
+                                    SoundEffectManager.Instance.GruntDamage();
+                                else
+                                {
+                                    enemies[e].Slay();
+                                    TotalScore += enemies[e].scorePoints;
+                                    enemies.RemoveAt(e);
+                                    
+                                    SoundEffectManager.Instance.GruntDeath();
+
+                                }
+                                turretProjectiles.RemoveAt(p);
+                                projectileRemoved = true;
+                                break;
+                            }
                         }
                     }
                 }

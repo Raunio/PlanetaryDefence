@@ -93,6 +93,7 @@
     <Compile Include="Gameplay\Animation.cs" />
     <Compile Include="Engine\Constants.cs" />
     <Compile Include="Gameplay\Behaviours\Behaviour.cs" />
+    <Compile Include="Gameplay\BuggyCombatHandlerCode.cs" />
     <Compile Include="Gameplay\Cameras\Camera.cs" />
     <Compile Include="Gameplay\Cameras\CameraController.cs" />
     <Compile Include="Gameplay\CombatHandler.cs" />

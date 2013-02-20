@@ -26,6 +26,27 @@ namespace PlanetaryDefence.Gameplay.Entities
             set;
         }
         /// <summary>
+        /// Gets the direction Vector of the projectile.
+        /// </summary>
+        public Vector2 Direction
+        {
+            get;
+            protected set;
+        }
+        /// <summary>
+        /// Gets or sets the health of the entity.
+        /// </summary>
+        public float CurrentHealth
+        {
+            get;
+            set;
+        }
+        public float MaxHealth
+        {
+            get;
+            protected set;
+        }
+        /// <summary>
         /// Gets the state of the entity.
         /// </summary>
         public Constants.CharacterState CurrentState

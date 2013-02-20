@@ -57,6 +57,9 @@ namespace PlanetaryDefence.Gameplay.Entities.Turret
             mainBarrel.Position = position;
             secondaryBarrel.Position = position;
 
+            MaxHealth = 500;
+            CurrentHealth = 100;
+
             RotationAcceleration = 0.075f;
             RotationSpeed = 0.2f;
 

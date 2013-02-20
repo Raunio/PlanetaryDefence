@@ -27,6 +27,15 @@ namespace PlanetaryDefence.Gameplay.Entities
         #region Getters and setters
 
         /// <summary>
+        /// Gets the list of spawned enemies.
+        /// </summary>
+        public List<Enemy> SpawnedEnemies
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
         /// Gets or sets the length in milliseconds of the current wave.
         /// </summary>
         public float WaveTime
@@ -100,7 +109,7 @@ namespace PlanetaryDefence.Gameplay.Entities
             this.possibleRightCordinates = possibleRightCordinates;
 
             spawnableEnemies = new List<Constants.EnemyType>();
-            SpawnedEntities = new List<Enemy>();
+            SpawnedEnemies = new List<Enemy>();
 
             randomNumber = new Random();
 
@@ -173,7 +182,7 @@ namespace PlanetaryDefence.Gameplay.Entities
         {
             Enemy enemy = new Enemy(enemySpriteSheet, GetRandomEnemyType(), GetSpawnPoint());
 
-            SpawnedEntities.Add(enemy);
+            SpawnedEnemies.Add(enemy);
         }
 
         private Constants.EnemyType GetRandomEnemyType()

@@ -13,6 +13,7 @@ using PlanetaryDefence.Engine.Input;
 using PlanetaryDefence.Engine.Physics;
 using Microsoft.Xna.Framework.Input.Touch;
 using PlanetaryDefence.Gameplay.Behaviours;
+using PlanetaryDefence.Gameplay.HUD;
 
 namespace PlanetaryDefence.Gameplay.Levels
 {
@@ -24,6 +25,7 @@ namespace PlanetaryDefence.Gameplay.Levels
         
         CameraController camControll;
         Viewport viewPort;
+        Rectangle gameArea;
 
         List<Projectile> turretProjectiles;
         List<Enemy> enemies;
@@ -31,6 +33,7 @@ namespace PlanetaryDefence.Gameplay.Levels
         GraphicsDevice graphics;
 
         EnemySpawner enemySpawner;
+        HeadsUpDisplay hud;
 
         Vector2[] upCords;
         Vector2[] leftCords;
@@ -53,18 +56,21 @@ namespace PlanetaryDefence.Gameplay.Levels
             turret = new Turret(origin);
             turretProjectiles = new List<Projectile>();
 
-            //shitty test
             camControll = new CameraController(origin);
             GameCamera = new Camera(viewPort);
+            gameArea = new Rectangle(-400, -400, viewPort.Width + 800, viewPort.Height + 800);
+            CombatHandler.Instance.GameArea = gameArea;
+            CombatHandler.Instance.TotalScore = 0;
 
-            upCords = new Vector2[2] { new Vector2(20, 20), new Vector2(400, 100) };
-            leftCords = new Vector2[2] { new Vector2(20, 20), new Vector2(20, 400) };
-            rightCords = new Vector2[2] { new Vector2(400, 20), new Vector2(450, 400) };
-            downCords = new Vector2[2] { new Vector2(20, 400), new Vector2(400, 450) };
+            upCords = new Vector2[2] { new Vector2(-10, -camControll.MovingRadius - 210), new Vector2(viewPort.Width + 10, -camControll.MovingRadius - 10) };
+            leftCords = new Vector2[2] { new Vector2(-camControll.MovingRadius - 210, -10), new Vector2(-camControll.MovingRadius - 10, viewPort.Height + 10) };
+            rightCords = new Vector2[2] { new Vector2(viewPort.Width + camControll.MovingRadius + 10, -10), new Vector2(viewPort.Width + camControll.MovingRadius + 210, viewPort.Height + 10) };
+            downCords = new Vector2[2] { new Vector2(-10, viewPort.Height + camControll.MovingRadius + 10), new Vector2(viewPort.Width + 10, viewPort.Height + camControll.MovingRadius + 210) };
 
             enemySpawner = new EnemySpawner(new GameTime(), 100, 60000.0f, 5000.0f, 5000.0f, 500.0f, 1000.0f, upCords, downCords, leftCords, rightCords);
+            hud = new HeadsUpDisplay((int)turret.CurrentHealth);
 
-            enemies = enemySpawner.SpawnedEntities;
+            enemies = enemySpawner.SpawnedEnemies;
 
             Behaviour.Initialize(turret.Position + turret.Origin);
             
@@ -76,6 +82,7 @@ namespace PlanetaryDefence.Gameplay.Levels
             Projectile.LoadSpriteSheet(content);
             SoundEffectManager.Instance.LoadContent(content);
             enemySpawner.LoadContent(content);
+            hud.LoadContent(content);
         }
 
         public void Update(GameTime gameTime)
@@ -88,6 +95,7 @@ namespace PlanetaryDefence.Gameplay.Levels
             turret.Update(gameTime);
 
             enemySpawner.Update(gameTime);
+            hud.Update(CombatHandler.Instance.TotalScore, (int)turret.CurrentHealth, GameCamera.Pos + new Vector2(210, viewPort.Height / 2 - 50), GameCamera.Pos + new Vector2(-400, viewPort.Height / 2 - 50));
 
             foreach (Entity e in enemies)
                 e.Update(gameTime);
@@ -100,7 +108,7 @@ namespace PlanetaryDefence.Gameplay.Levels
             if (turret.ShotInQueue && turret.Velocity.Z == 0)
                 turret.ShootMainBarrel(InputManager.TouchPosition);
 
-            CombatHandler.Instance.Update(turret, enemies);
+            CombatHandler.Instance.Update(gameTime, turret, enemies);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -110,6 +118,8 @@ namespace PlanetaryDefence.Gameplay.Levels
 
             foreach (Entity e in enemies)
                 e.Draw(spriteBatch);
+
+            hud.Draw(spriteBatch);
         }
     }
 }

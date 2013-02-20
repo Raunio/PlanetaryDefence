@@ -30,7 +30,6 @@ namespace PlanetaryDefence.Gameplay.Cameras
         private float tangentialVelocityMin;
         
         private float directionAngle;
-        private float movingRadius;
 
         
         #endregion
@@ -46,6 +45,12 @@ namespace PlanetaryDefence.Gameplay.Cameras
             {
                 return position;
             }
+        }
+
+        public float MovingRadius
+        {
+            get;
+            private set;
         }
 
         #endregion
@@ -66,7 +71,7 @@ namespace PlanetaryDefence.Gameplay.Cameras
             tangentialVelocityMin = 0.1f;
             tangentialVelocityMax = 5.0f;
             tangentialVelocity = tangentialVelocityMin;
-            movingRadius = 100.0f;
+            MovingRadius = 100.0f;
         }
 
         private Vector2 CalculateDistanceVector(Vector2 pointTo, Vector2 pointFrom)
@@ -106,11 +111,11 @@ namespace PlanetaryDefence.Gameplay.Cameras
         {
             originToPoint = CalculateDistanceVector(point, origin);
 
-            if (originToPoint.Length() > movingRadius)
+            if (originToPoint.Length() > MovingRadius)
             {
                 float pointAngle = (float)Math.Atan2(originToPoint.Y, originToPoint.X);
                 Vector2 pointDirection = new Vector2((float)Math.Cos(pointAngle), (float)Math.Sin(pointAngle));
-                target = origin + movingRadius * pointDirection;
+                target = origin + MovingRadius * pointDirection;
             }
 
             else

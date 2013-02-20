@@ -24,25 +24,23 @@ namespace PlanetaryDefence.Gameplay.Entities
         #endregion
 
         #region Gets & Sets
-        /// <summary>
-        /// Gets or sets the health of the entity.
-        /// </summary>
-        public float CurrentHealth
-        {
-            get;
-            private set;
-        }
-
-        public float MaxHealth
-        {
-            get;
-            private set;
-        }
 
         /// <summary>
         /// Gets the type of the enemy.
         /// </summary>
         public Constants.EnemyType enemyType
+        {
+            get;
+            private set;
+        }
+
+        public int collisionDamage
+        {
+            get;
+            private set;
+        }
+
+        public int scorePoints
         {
             get;
             private set;
@@ -97,6 +95,8 @@ namespace PlanetaryDefence.Gameplay.Entities
                     Acceleration = 0.25f;
                     MaxHealth = 20;
                     CurrentHealth = 20;
+                    collisionDamage = 10;
+                    scorePoints = 10;
                     break;
             }
         }
@@ -104,6 +104,11 @@ namespace PlanetaryDefence.Gameplay.Entities
         public void InflictDamage(float amount)
         {
             CurrentHealth -= amount;
+        }
+
+        public void Slay()
+        {
+
         }
 
         public override void Update(GameTime gameTime)
