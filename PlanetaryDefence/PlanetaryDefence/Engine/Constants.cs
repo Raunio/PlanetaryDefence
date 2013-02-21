@@ -54,6 +54,11 @@ namespace PlanetaryDefence.Engine
 
         #region Other Textures
 
+        public const String groundTextureAsset = "Textures/groundTexture";
+        public const String rockTextureAsset = "Textures/rock";
+        public const String bushTextureAsset = "Textures/bush";
+        public const String bloodSpaltTexureAsset = "Textures/bloodSplat";
+
         #endregion
 
         #region Visual Effects
@@ -109,6 +114,12 @@ namespace PlanetaryDefence.Engine
             Down,
             Left,
             Right,
+        }
+
+        public enum ClutterType
+        {
+            Rock,
+            Bush,
         }
 
         #endregion

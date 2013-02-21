@@ -69,7 +69,12 @@ namespace XnaGame
         public override void Update(GameTime gameTime)
         {
             mainGameLevel.Update(gameTime);
-            base.Update(gameTime);        
+            base.Update(gameTime);
+
+            if (mainGameLevel.IsTurretDead)
+            {
+                ScreenManager.ChangeScreen((GameScreen)XGame.GameOverScreen);    
+            }
         }
 
         public override void Draw(GameTime gameTime)

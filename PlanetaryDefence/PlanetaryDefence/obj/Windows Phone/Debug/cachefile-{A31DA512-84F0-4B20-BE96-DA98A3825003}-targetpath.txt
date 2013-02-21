@@ -1,4 +1,5 @@
 Content\Fonts\MenuFont.xnb
+Content\Fonts\georgia.xnb
 Content\Sprites\playGameButton.xnb
 Content\Sprites\Entities\Turret\turretBarrel.xnb
 Content\Sprites\Entities\Turret\turretBody.xnb
@@ -9,6 +10,14 @@ Content\Sprites\Entities\Enemies\gruntSheetSmall.xnb
 Content\Sprites\Entities\Turret\tykkiSmall.xnb
 Content\Sprites\Entities\Turret\turretBarrel2.xnb
 Content\Sprites\Entities\Turret\turretStand.xnb
+Content\Textures\groundTexture.xnb
+Content\Textures\bloodSplat.xnb
+Content\Textures\bush.xnb
+Content\Textures\rock.xnb
+Content\Sprites\exitButton.xnb
+Content\Sprites\playButton.xnb
+Content\Textures\gameover.xnb
+Content\Textures\splash.xnb
 Content\Audio\SoundEffects\plasmagun.xnb
 Content\Audio\SoundEffects\gruntDamage.xnb
 Content\Audio\SoundEffects\gruntDeath.xnb
@@ -16,4 +25,3 @@ Content\Audio\Music\Backround.xnb
 Content\Audio\Music\Backround.wma
 Content\Audio\Music\Menu.xnb
 Content\Audio\Music\Menu.wma
-Content\Fonts\georgia.xnb

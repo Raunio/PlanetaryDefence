@@ -73,7 +73,7 @@ namespace PlanetaryDefence.Gameplay.HUD
         {
             if (showhud)
                 spritebatch.DrawString(hudfont, "Score: " + playerscore, playerscorepos, Color.Red);
-            spritebatch.DrawString(hudfont, "Health " + playerhealth, playerhealthpos, Color.Green);
+            spritebatch.DrawString(hudfont, "Health " + playerhealth, playerhealthpos, Color.Blue);
 
         }
     }

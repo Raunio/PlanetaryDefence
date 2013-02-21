@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XnaGameStateManagement")]
-[assembly: AssemblyProduct("XnaGameStateManagement")]
+[assembly: AssemblyTitle("PlanetaryDefence")]
+[assembly: AssemblyProduct("PlanetaryDefence")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Stickmansoft")]
-[assembly: AssemblyCopyright("Copyright © Stickmansoft 2012")]
-[assembly: AssemblyTrademark("Stickmansoft")]
+[assembly: AssemblyCompany("TuukkaNikoPetteri")]
+[assembly: AssemblyCopyright("Copyright © TUNIPE 2012")]
+[assembly: AssemblyTrademark("PlanetaryDefence")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

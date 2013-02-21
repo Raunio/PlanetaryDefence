@@ -7,145 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\playGameButton.png</Source>
-      <Name>Sprites\playGameButton</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playGameButton.xnb</Output>
-      <Time>2013-02-20T14:58:56.3008226+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Turret\turretBarrel.png</Source>
-      <Name>Sprites\Entities\Turret\turretBarrel</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Turret\turretBody.png</Source>
-      <Name>Sprites\Entities\Turret\turretBody</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBody.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Turret\turretShield.png</Source>
-      <Name>Sprites\Entities\Turret\turretShield</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretShield.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Projectiles\plasmaBall.png</Source>
-      <Name>Sprites\Entities\Projectiles\plasmaBall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Projectiles\plasmaBall.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Enemies\enemy.png</Source>
-      <Name>Sprites\Entities\Enemies\enemy</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Enemies\enemy.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Enemies\gruntSheetSmall.png</Source>
-      <Name>Sprites\Entities\Enemies\gruntSheetSmall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Enemies\gruntSheetSmall.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Turret\tykkiSmall.png</Source>
-      <Name>Sprites\Entities\Turret\tykkiSmall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\tykkiSmall.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Turret\turretBarrel2.png</Source>
-      <Name>Sprites\Entities\Turret\turretBarrel2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel2.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Entities\Turret\turretStand.png</Source>
-      <Name>Sprites\Entities\Turret\turretStand</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretStand.xnb</Output>
-      <Time>2013-02-20T14:58:56.2851997+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\SoundEffects\plasmagun.wav</Source>
-      <Name>Audio\SoundEffects\plasmagun</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\plasmagun.xnb</Output>
-      <Time>2013-02-20T14:58:56.2696374+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\SoundEffects\gruntDamage.wav</Source>
-      <Name>Audio\SoundEffects\gruntDamage</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\gruntDamage.xnb</Output>
-      <Time>2013-02-20T14:58:56.2540374+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\SoundEffects\gruntDeath.wav</Source>
-      <Name>Audio\SoundEffects\gruntDeath</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\gruntDeath.xnb</Output>
-      <Time>2013-02-20T14:58:56.2696374+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\Music\Backround.mp3</Source>
-      <Name>Audio\Music\Backround</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Backround.xnb</Output>
-      <Extra>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Backround.wma</Extra>
-      <Time>2013-02-20T14:58:56.2384371+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\Music\Menu.mp3</Source>
-      <Name>Audio\Music\Menu</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Menu.xnb</Output>
-      <Extra>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Menu.wma</Extra>
-      <Time>2013-02-20T14:58:56.2540374+02:00</Time>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\MenuFont.xnb</Output>
+      <Time>2013-02-21T08:36:57.6260704+02:00</Time>
     </Item>
     <Item>
       <Source>Fonts\georgia.spritefont</Source>
@@ -153,8 +16,217 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\georgia.xnb</Output>
-      <Time>2013-02-20T23:35:29.08951+02:00</Time>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Fonts\georgia.xnb</Output>
+      <Time>2013-02-21T08:36:57.641671+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\playGameButton.png</Source>
+      <Name>Sprites\playGameButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playGameButton.xnb</Output>
+      <Time>2013-02-21T08:36:57.719674+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Turret\turretBarrel.png</Source>
+      <Name>Sprites\Entities\Turret\turretBarrel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel.xnb</Output>
+      <Time>2013-02-21T08:36:57.6728722+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Turret\turretBody.png</Source>
+      <Name>Sprites\Entities\Turret\turretBody</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBody.xnb</Output>
+      <Time>2013-02-21T08:36:57.6884728+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Turret\turretShield.png</Source>
+      <Name>Sprites\Entities\Turret\turretShield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretShield.xnb</Output>
+      <Time>2013-02-21T08:36:57.7040734+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Projectiles\plasmaBall.png</Source>
+      <Name>Sprites\Entities\Projectiles\plasmaBall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Projectiles\plasmaBall.xnb</Output>
+      <Time>2013-02-21T08:36:57.6728722+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Enemies\enemy.png</Source>
+      <Name>Sprites\Entities\Enemies\enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Enemies\enemy.xnb</Output>
+      <Time>2013-02-21T08:36:57.6572716+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Enemies\gruntSheetSmall.png</Source>
+      <Name>Sprites\Entities\Enemies\gruntSheetSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Enemies\gruntSheetSmall.xnb</Output>
+      <Time>2013-02-21T08:36:57.6728722+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Turret\tykkiSmall.png</Source>
+      <Name>Sprites\Entities\Turret\tykkiSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\tykkiSmall.xnb</Output>
+      <Time>2013-02-21T08:36:57.7040734+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Turret\turretBarrel2.png</Source>
+      <Name>Sprites\Entities\Turret\turretBarrel2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretBarrel2.xnb</Output>
+      <Time>2013-02-21T08:36:57.6884728+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Entities\Turret\turretStand.png</Source>
+      <Name>Sprites\Entities\Turret\turretStand</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\Entities\Turret\turretStand.xnb</Output>
+      <Time>2013-02-21T08:36:57.7040734+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\groundTexture.png</Source>
+      <Name>Textures\groundTexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Textures\groundTexture.xnb</Output>
+      <Time>2013-02-21T09:09:58.4285095+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\bloodSplat.png</Source>
+      <Name>Textures\bloodSplat</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Textures\bloodSplat.xnb</Output>
+      <Time>2013-02-21T10:00:32.3254879+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\bush.png</Source>
+      <Name>Textures\bush</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Textures\bush.xnb</Output>
+      <Time>2013-02-21T10:00:32.3384879+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\rock.png</Source>
+      <Name>Textures\rock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Textures\rock.xnb</Output>
+      <Time>2013-02-21T10:00:32.3504879+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\exitButton.png</Source>
+      <Name>Sprites\exitButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\exitButton.xnb</Output>
+      <Time>2013-02-21T10:19:24.9954896+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\playButton.png</Source>
+      <Name>Sprites\playButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Sprites\playButton.xnb</Output>
+      <Time>2013-02-21T10:19:25.0094896+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\gameover.jpg</Source>
+      <Name>Textures\gameover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Textures\gameover.xnb</Output>
+      <Time>2013-02-21T10:29:03.6630117+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\splash.jpg</Source>
+      <Name>Textures\splash</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Textures\splash.xnb</Output>
+      <Time>2013-02-21T10:29:03.6990369+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\SoundEffects\plasmagun.wav</Source>
+      <Name>Audio\SoundEffects\plasmagun</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\plasmagun.xnb</Output>
+      <Time>2013-02-21T08:36:57.6104698+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\SoundEffects\gruntDamage.wav</Source>
+      <Name>Audio\SoundEffects\gruntDamage</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\gruntDamage.xnb</Output>
+      <Time>2013-02-21T08:36:57.5012656+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\SoundEffects\gruntDeath.wav</Source>
+      <Name>Audio\SoundEffects\gruntDeath</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\SoundEffects\gruntDeath.xnb</Output>
+      <Time>2013-02-21T08:36:57.563668+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Music\Backround.mp3</Source>
+      <Name>Audio\Music\Backround</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Backround.xnb</Output>
+      <Extra>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Backround.wma</Extra>
+      <Time>2013-02-21T08:36:57.2828572+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Music\Menu.mp3</Source>
+      <Name>Audio\Music\Menu</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Menu.xnb</Output>
+      <Extra>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\Audio\Music\Menu.wma</Extra>
+      <Time>2013-02-21T08:36:57.4544638+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -163,39 +235,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
-      <LoggerRootDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\koulu\visual studio 2010\WPhone\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
+      <RootDirectory>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefenceContent\</RootDirectory>
+      <LoggerRootDirectory>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\</LoggerRootDirectory>
+      <IntermediateDirectory>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\obj\Windows Phone\Debug\</IntermediateDirectory>
+      <OutputDirectory>K:\WindowsMobiili\PlanetaryDefence\PlanetaryDefence\PlanetaryDefence\bin\Windows Phone\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2011-09-01T17:22:30+03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-11-02T00:30:23.4216178+02:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-01-09T13:31:13.1802985+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

@@ -20,7 +20,10 @@ namespace XnaGame
     public sealed class MenuScreen : MainGameScreen, IStartGameScreen
     {
         Texture2D playGameButtonTexture;
+        Texture2D exitButtonTexture;
+        Rectangle exitButtonRectangle;
         Rectangle playGameButtonRectangle;
+        Texture2D bg;
 
         public MenuScreen(Game game)
             : base(game)
@@ -30,18 +33,26 @@ namespace XnaGame
 
         protected override void LoadContent()
         {
-            playGameButtonTexture = Content.Load<Texture2D>("Sprites/playGameButton");
-            playGameButtonRectangle = new Rectangle(100, 100, playGameButtonTexture.Width, playGameButtonTexture.Height);
+            playGameButtonTexture = Content.Load<Texture2D>("Sprites/playButton");
+            playGameButtonRectangle = new Rectangle(100, 350, playGameButtonTexture.Width, playGameButtonTexture.Height);
+            exitButtonTexture = Content.Load<Texture2D>("Sprites/exitButton");
+            exitButtonRectangle = new Rectangle(420, 350, exitButtonTexture.Width, exitButtonTexture.Height);
             Globals.SoundsEnabled = true;
             MusicManager.Instance.LoadContent(Content);
             MusicManager.Instance.PlayMenuMusic();
+            bg = Content.Load<Texture2D>("Textures/splash");
         }
 
         public override void Update(GameTime gameTime)
         {
             if (playGameButtonRectangle.Contains((int)InputManager.TouchPosition.X, (int)InputManager.TouchPosition.Y))
             {
-                ScreenManager.PushScreen((GameScreen)XGame.PlayGameScreen);
+                ScreenManager.ChangeScreen((GameScreen)XGame.PlayGameScreen);
+            }
+
+            if (exitButtonRectangle.Contains((int)InputManager.TouchPosition.X, (int)InputManager.TouchPosition.Y))
+            {
+                XGame.Exit();
             }
 
             base.Update(gameTime);
@@ -53,7 +64,10 @@ namespace XnaGame
 
             GraphicsDevice.Clear(Color.LightSkyBlue);
 
+            XGame.SpriteBatch.Draw(bg, Vector2.Zero, Color.White);
+
             XGame.SpriteBatch.Draw(playGameButtonTexture, playGameButtonRectangle, Color.White);
+            XGame.SpriteBatch.Draw(exitButtonTexture, exitButtonRectangle, Color.White);
 
             base.Draw(gameTime);
 

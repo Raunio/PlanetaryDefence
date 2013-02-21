@@ -101,6 +101,7 @@
     <Compile Include="Gameplay\Entities\Enemy.cs" />
     <Compile Include="Gameplay\Entities\EnemySpawner.cs" />
     <Compile Include="Gameplay\Entities\Entity.cs" />
+    <Compile Include="Gameplay\Entities\GroundClutter.cs" />
     <Compile Include="Gameplay\Entities\MovingEntity.cs" />
     <Compile Include="Gameplay\Entities\Spawner.cs" />
     <Compile Include="Gameplay\Entities\Turret\Turret.cs" />

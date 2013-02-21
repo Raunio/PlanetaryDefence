@@ -34,13 +34,19 @@ namespace PlanetaryDefence.Gameplay.Entities
             private set;
         }
 
-        public int collisionDamage
+        public int CollisionDamage
         {
             get;
             private set;
         }
 
-        public int scorePoints
+        public TimeSpan HitRate
+        {
+            get;
+            private set;
+        }
+
+        public int ScorePoints
         {
             get;
             private set;
@@ -93,10 +99,10 @@ namespace PlanetaryDefence.Gameplay.Entities
                     RotationSpeed = 0.2f;
                     WalkSpeed = 3f;
                     Acceleration = 0.25f;
-                    MaxHealth = 20;
-                    CurrentHealth = 20;
-                    collisionDamage = 10;
-                    scorePoints = 10;
+                    MaxHealth = 30;
+                    CurrentHealth = 30;
+                    CollisionDamage = 10;
+                    ScorePoints = 10;
                     break;
             }
         }

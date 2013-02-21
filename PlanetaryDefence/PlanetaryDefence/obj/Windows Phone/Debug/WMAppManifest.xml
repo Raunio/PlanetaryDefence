@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.0">
-  <App xmlns="" ProductID="{c31e5814-e114-434e-84e2-5fe758c9acc9}" Title="XnaGameStateManagement" RuntimeType="XNA" Version="1.0.0.0" Genre="Apps.Normal" Author="" Description="" Publisher="">
+  <App xmlns="" ProductID="{c31e5814-e114-434e-84e2-5fe758c9acc9}" Title="PlanetaryDefence" RuntimeType="XNA" Version="1.0.0.0" Genre="Apps.Normal" Author="" Description="" Publisher="">
     <IconPath IsRelative="true" IsResource="false">GameThumbnail.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

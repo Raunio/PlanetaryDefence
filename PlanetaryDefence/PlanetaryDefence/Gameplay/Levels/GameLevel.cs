@@ -14,6 +14,7 @@ using PlanetaryDefence.Engine.Physics;
 using Microsoft.Xna.Framework.Input.Touch;
 using PlanetaryDefence.Gameplay.Behaviours;
 using PlanetaryDefence.Gameplay.HUD;
+using PlanetaryDefence.Engine;
 
 namespace PlanetaryDefence.Gameplay.Levels
 {
@@ -29,6 +30,7 @@ namespace PlanetaryDefence.Gameplay.Levels
 
         List<Projectile> turretProjectiles;
         List<Enemy> enemies;
+        GroundClutter[] clutter;
 
         GraphicsDevice graphics;
 
@@ -40,7 +42,19 @@ namespace PlanetaryDefence.Gameplay.Levels
         Vector2[] rightCords;
         Vector2[] downCords;
 
+        Texture2D groundTexture;
+        Texture2D rockTexture;
+        Texture2D bushTexture;
+
+        private const int clutterAmount = 50;
+
         public Camera GameCamera
+        {
+            get;
+            private set;
+        }
+
+        public bool IsTurretDead
         {
             get;
             private set;
@@ -67,12 +81,15 @@ namespace PlanetaryDefence.Gameplay.Levels
             rightCords = new Vector2[2] { new Vector2(viewPort.Width + camControll.MovingRadius + 10, -10), new Vector2(viewPort.Width + camControll.MovingRadius + 210, viewPort.Height + 10) };
             downCords = new Vector2[2] { new Vector2(-10, viewPort.Height + camControll.MovingRadius + 10), new Vector2(viewPort.Width + 10, viewPort.Height + camControll.MovingRadius + 210) };
 
-            enemySpawner = new EnemySpawner(new GameTime(), 100, 60000.0f, 5000.0f, 5000.0f, 500.0f, 1000.0f, upCords, downCords, leftCords, rightCords);
+            enemySpawner = new EnemySpawner(new GameTime(), 1000, 20000.0f, 5000.0f, 5000.0f, 500.0f, 500.0f, upCords, downCords, leftCords, rightCords);
+
             hud = new HeadsUpDisplay((int)turret.CurrentHealth);
 
             enemies = enemySpawner.SpawnedEnemies;
 
             Behaviour.Initialize(turret.Position + turret.Origin);
+
+            clutter = new GroundClutter[clutterAmount];
             
         }
 
@@ -83,6 +100,21 @@ namespace PlanetaryDefence.Gameplay.Levels
             SoundEffectManager.Instance.LoadContent(content);
             enemySpawner.LoadContent(content);
             hud.LoadContent(content);
+            groundTexture = content.Load<Texture2D>(Constants.groundTextureAsset);
+            rockTexture = content.Load<Texture2D>(Constants.rockTextureAsset);
+            bushTexture = content.Load<Texture2D>(Constants.bushTextureAsset);
+
+            for (int i = 0; i < clutterAmount; i++)
+            {
+                Random r = new Random();
+
+                int number = r.Next(0, 100);
+
+                if (number < 50)
+                    clutter[i] = new GroundClutter(rockTexture, Constants.ClutterType.Rock);
+                else
+                    clutter[i] = new GroundClutter(bushTexture, Constants.ClutterType.Bush);
+            }
         }
 
         public void Update(GameTime gameTime)
@@ -109,10 +141,19 @@ namespace PlanetaryDefence.Gameplay.Levels
                 turret.ShootMainBarrel(InputManager.TouchPosition);
 
             CombatHandler.Instance.Update(gameTime, turret, enemies);
+
+            if (turret.CurrentState == Constants.CharacterState.Dead)
+            {
+                IsTurretDead = true;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            DrawGroundTexture(spriteBatch);
+            foreach (GroundClutter c in clutter)
+                c.Draw(spriteBatch);
+
             turret.DrawProjectiles(spriteBatch);
             turret.DrawTurret(spriteBatch);
 
@@ -120,6 +161,32 @@ namespace PlanetaryDefence.Gameplay.Levels
                 e.Draw(spriteBatch);
 
             hud.Draw(spriteBatch);
+        }
+
+        private void DrawGroundTexture(SpriteBatch spriteBatch)
+        {
+            //int x = -400;
+            //int y = -400;
+            int x = (int)-camControll.MovingRadius - 10;
+            int y = (int)-camControll.MovingRadius - 10;
+            //int width = gameArea.Width;
+            //int height = gameArea.Height;
+            int width = (int)(camControll.MovingRadius + 10)*2 + viewPort.Width;
+            int height = (int)(camControll.MovingRadius + 20) * 2 + viewPort.Height;
+
+            double paska = width / groundTexture.Width;
+            double kyrpa = height / groundTexture.Height;
+
+            int textureCountX = (int)Math.Round(paska);
+            int textureCountY = (int)Math.Round(kyrpa);
+
+            for (int i = 0; i < textureCountX; i++)
+            {
+                for (int j = 0; j < textureCountY; j++)
+                {
+                    spriteBatch.Draw(groundTexture, new Vector2(x + i * groundTexture.Width, y + j * groundTexture.Height), Color.White);
+                }
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using PlanetaryDefence.Gameplay.Entities;
 using PlanetaryDefence.Gameplay.Entities.Turret;
 using Microsoft.Xna.Framework;
+using PlanetaryDefence.Engine;
 
 namespace PlanetaryDefence.Gameplay
 {
@@ -50,8 +51,8 @@ namespace PlanetaryDefence.Gameplay
                 {
                     if (gameTime.TotalGameTime - previousHitTime > hitRate)
                     {
-                        turret.CurrentHealth -= enemies[E].collisionDamage;
-                        enemies[E].CurrentHealth -= enemies[E].collisionDamage;
+                        turret.CurrentHealth -= enemies[E].CollisionDamage;
+                        enemies[E].CurrentHealth -= enemies[E].CollisionDamage;
                         
                         previousHitTime = gameTime.TotalGameTime;
 
@@ -59,11 +60,19 @@ namespace PlanetaryDefence.Gameplay
                             SoundEffectManager.Instance.GruntDamage();
                         else
                         {
-                            TotalScore -= enemies[E].scorePoints;
+                            TotalScore -= enemies[E].ScorePoints;
                             enemies.RemoveAt(E);
                             SoundEffectManager.Instance.GruntDeath();
                         }
 
+                        if (turret.CurrentHealth > 0)
+                        {
+                            //Play sound effect
+                        }
+                        else
+                        {
+                            turret.CurrentState = Constants.CharacterState.Dead;
+                        }
                     }
                 }
             }
@@ -96,7 +105,7 @@ namespace PlanetaryDefence.Gameplay
                                 else
                                 {
                                     enemies[e].Slay();
-                                    TotalScore += enemies[e].scorePoints;
+                                    TotalScore += enemies[e].ScorePoints;
                                     enemies.RemoveAt(e);
                                     
                                     SoundEffectManager.Instance.GruntDeath();
